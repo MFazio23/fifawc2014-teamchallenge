@@ -10,11 +10,11 @@ angular.module('fifaWC.controllers', [])
 
     })
     .controller("TeamsController", function ($scope, $q, Team) {
-        var teamPromise = Team.getTeams();
-
-        teamPromise.then(function(result) {
+        Team.getTeams().then(function(result) {
             $scope.teams = result;
         });
+
+        //Team.getTeams();
 
         $scope.orderProp = "name";
     });

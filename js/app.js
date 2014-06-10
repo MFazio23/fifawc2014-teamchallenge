@@ -6,3 +6,9 @@ angular.module('fifaWC', [
     "fifaWC.services",
     "fifaWC.routing"
 ]);
+
+// Azure client
+var azureClient = new WindowsAzure.MobileServiceClient(
+    "https://fifa-wc.azure-mobile.net/",
+    "uksxBgKVVyIFHAfImEQvKfIsGbOymU33"
+);
