@@ -3,5 +3,6 @@
 angular.module('fifaWC', [
     "ngRoute",
     "fifaWC.controllers",
-    "fifaWC.services"
+    "fifaWC.services",
+    "fifaWC.routing"
 ]);

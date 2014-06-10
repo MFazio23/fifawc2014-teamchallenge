@@ -30,9 +30,11 @@
 </head>
 <body>
 
-<div ng-include src="'views/header.html'"></div>
+<div ng-include src="'views/includes/header.html'"></div>
 
-<h1>Testing!</h1>
+<ng-view class="app-content ng-scope">
+    Home
+</ng-view>
 
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
@@ -45,5 +47,6 @@
 <script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/services.js"></script>
+<script src="js/routing.js"></script>
 </body>
 </html>
