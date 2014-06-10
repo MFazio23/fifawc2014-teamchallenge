@@ -1,0 +1,322 @@
+[
+    {
+        "id": "085AC1A9-CD20-4035-823A-5E2219F15A51",
+        "secondarycolor": "FFE812",
+        "primarycolor": "179354",
+        "tertiarycolor": "0B2D84",
+        "group": "A",
+        "owner": "",
+        "shortname": "BRA",
+        "name": "Brazil"
+    },
+    {
+        "id": "35C6A163-AC85-4BE6-AA51-1ED3D6F3D82A",
+        "secondarycolor": "169254",
+        "primarycolor": "169254",
+        "tertiarycolor": "FFFDFF",
+        "group": "A",
+        "owner": "",
+        "shortname": "MEX",
+        "name": "Mexico"
+    },
+    {
+        "id": "C8723F75-FD5C-49A9-BA2F-E4AE866AD0A0",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "0473AA",
+        "tertiarycolor": "000000",
+        "group": "C",
+        "owner": "",
+        "shortname": "GRE",
+        "name": "Greece"
+    },
+    {
+        "id": "B01CBB3D-1C6B-4838-AE7D-3F796E0A4A33",
+        "secondarycolor": "FAEA0E",
+        "primarycolor": "DA010C",
+        "tertiarycolor": "FFFFFD",
+        "group": "B",
+        "owner": "",
+        "shortname": "ESP",
+        "name": "Spain"
+    },
+    {
+        "id": "06950053-F008-4713-BDA0-4427EE23FC2A",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "FF6600",
+        "tertiarycolor": "022B87",
+        "group": "B",
+        "owner": "",
+        "shortname": "NED",
+        "name": "Netherlands"
+    },
+    {
+        "id": "CBFA638D-C0F8-4531-B535-D527D398D760",
+        "secondarycolor": "022A8A",
+        "primarycolor": "FBEB0F",
+        "tertiarycolor": "DC171E",
+        "group": "C",
+        "owner": "",
+        "shortname": "COL",
+        "name": "Colombia"
+    },
+    {
+        "id": "9988B4E9-FD5E-4A1D-8E7B-A2504AB72FB6",
+        "secondarycolor": "DC1625",
+        "primarycolor": "179355",
+        "tertiarycolor": "FAEA10",
+        "group": "A",
+        "owner": "",
+        "shortname": "CMR",
+        "name": "Cameroon"
+    },
+    {
+        "id": "14B02833-8CD7-4CEA-A38C-2AE93184B550",
+        "secondarycolor": "DA000C",
+        "primarycolor": "FFFFFF",
+        "tertiarycolor": "000072",
+        "group": "C",
+        "owner": "",
+        "shortname": "JPN",
+        "name": "Japan"
+    },
+    {
+        "id": "A1DB1F82-90C6-4304-A46B-9DAFDF5DFA36",
+        "secondarycolor": "012988",
+        "primarycolor": "DA171D",
+        "tertiarycolor": "FFFFFD",
+        "group": "A",
+        "owner": "",
+        "shortname": "CRO",
+        "name": "Croatia"
+    },
+    {
+        "id": "9CD22D4A-DC51-49D0-AFF2-340A088AD080",
+        "secondarycolor": "FFFDFF",
+        "primarycolor": "0D51A4",
+        "tertiarycolor": "FFF312",
+        "group": "D",
+        "owner": "",
+        "shortname": "URU",
+        "name": "Uruguay"
+    },
+    {
+        "id": "931274CF-F9B3-4BDD-9EC3-57F20A88942A",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "C80F1D",
+        "tertiarycolor": "2B57AC",
+        "group": "D",
+        "owner": "",
+        "shortname": "ENG",
+        "name": "England"
+    },
+    {
+        "id": "18876A18-F45A-4E48-896E-A91A1AB11254",
+        "secondarycolor": "179355",
+        "primarycolor": "EC7D23",
+        "tertiarycolor": "FFFFFF",
+        "group": "C",
+        "owner": "",
+        "shortname": "CIV",
+        "name": "Ivory Coast"
+    },
+    {
+        "id": "9AF995D9-15D2-4322-A1E4-BA790D421F08",
+        "secondarycolor": "DC171E",
+        "primarycolor": "179355",
+        "tertiarycolor": "FFFFFF",
+        "group": "D",
+        "owner": "",
+        "shortname": "ITA",
+        "name": "Italy"
+    },
+    {
+        "id": "FFDC5936-C7A3-44CC-83F3-861370DD7B52",
+        "secondarycolor": "DD161B",
+        "primarycolor": "032A89",
+        "tertiarycolor": "FFFFFF",
+        "group": "D",
+        "owner": "",
+        "shortname": "CRC",
+        "name": "Costa Rica"
+    },
+    {
+        "id": "0ED63D39-E2B6-419B-8FE7-A653E839F5BA",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "DD151F",
+        "tertiarycolor": "000000",
+        "group": "E",
+        "owner": "",
+        "shortname": "SUI",
+        "name": "Switzerland"
+    },
+    {
+        "id": "F714A05A-976C-4093-BCA3-533D947242D7",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "010066",
+        "tertiarycolor": "D2081E",
+        "group": "E",
+        "owner": "",
+        "shortname": "FRA",
+        "name": "France"
+    },
+    {
+        "id": "B836BC6D-4695-4AEF-98E0-F038B13D1D46",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "3E9EC4",
+        "tertiarycolor": "001262",
+        "group": "F",
+        "owner": "",
+        "shortname": "ARG",
+        "name": "Argentina"
+    },
+    {
+        "id": "E1E0D549-4F1C-47C6-97B3-AC30E9065738",
+        "secondarycolor": "002988",
+        "primarycolor": "FAEA10",
+        "tertiarycolor": "DB161D",
+        "group": "E",
+        "owner": "",
+        "shortname": "ECU",
+        "name": "Ecuador"
+    },
+    {
+        "id": "996849CD-59A2-4BCD-98AA-64004B5E55FF",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "007934",
+        "tertiarycolor": "000000",
+        "group": "F",
+        "owner": "",
+        "shortname": "NGA",
+        "name": "Nigeria"
+    },
+    {
+        "id": "FE62B686-1246-41BD-82B4-1AE8415121AA",
+        "secondarycolor": "F9EB0C",
+        "primarycolor": "DC000E",
+        "tertiarycolor": "179355",
+        "group": "G",
+        "owner": "",
+        "shortname": "GHA",
+        "name": "Ghana"
+    },
+    {
+        "id": "7BA02311-F356-4C7B-ABEA-66055CD41EF2",
+        "secondarycolor": "F9DA10",
+        "primarycolor": "000C72",
+        "tertiarycolor": "FFFFFF",
+        "group": "F",
+        "owner": "",
+        "shortname": "BIH",
+        "name": "Bosnia and Herzegovina"
+    },
+    {
+        "id": "7D531DF6-20BA-460C-B9E3-E7BD4C852F8C",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "0A51A1",
+        "tertiarycolor": "000000",
+        "group": "E",
+        "owner": "",
+        "shortname": "HON",
+        "name": "Honduras"
+    },
+    {
+        "id": "B7583D24-FFDA-43E4-A255-DE08703B6888",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "179555",
+        "tertiarycolor": "DC171E",
+        "group": "F",
+        "owner": "",
+        "shortname": "IRN",
+        "name": "Iran"
+    },
+    {
+        "id": "28650E10-500D-470F-B2E1-34D3D5184A40",
+        "secondarycolor": "DC000E",
+        "primarycolor": "000200",
+        "tertiarycolor": "F6DA0C",
+        "group": "G",
+        "owner": "",
+        "shortname": "GER",
+        "name": "Germany"
+    },
+    {
+        "id": "23DF8212-DFF6-4DF0-A7DB-CD74A1910F72",
+        "secondarycolor": "FEFFFF",
+        "primarycolor": "010080",
+        "tertiarycolor": "C4101B",
+        "group": "B",
+        "owner": "",
+        "shortname": "AUS",
+        "name": "Australia"
+    },
+    {
+        "id": "A7C66DFA-238B-4F08-8744-C99A60B5CDA9",
+        "secondarycolor": "DC171E",
+        "primarycolor": "012988",
+        "tertiarycolor": "FFFFFF",
+        "group": "B",
+        "owner": "",
+        "shortname": "CHI",
+        "name": "Chile"
+    },
+    {
+        "id": "55A31DDB-C0B0-47C1-97B4-D0DE3C900869",
+        "secondarycolor": "FAEA10",
+        "primarycolor": "000000",
+        "tertiarycolor": "DC171E",
+        "group": "H",
+        "owner": "",
+        "shortname": "BEL",
+        "name": "Belgium"
+    },
+    {
+        "id": "B16FE893-E804-42A5-978E-9C8C52C7C971",
+        "secondarycolor": "07298A",
+        "primarycolor": "D71D22",
+        "tertiarycolor": "FFFFFF",
+        "group": "H",
+        "owner": "",
+        "shortname": "KOR",
+        "name": "South Korea"
+    },
+    {
+        "id": "3DE1AF1B-F372-4476-8025-DFF5B6EF607F",
+        "secondarycolor": "DB161D",
+        "primarycolor": "DA151C",
+        "tertiarycolor": "FFFFFF",
+        "group": "G",
+        "owner": "",
+        "shortname": "POR",
+        "name": "Portugal"
+    },
+    {
+        "id": "A0925950-2CEA-4C6B-9C77-81EE58105640",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "179253",
+        "tertiarycolor": "DD151F",
+        "group": "H",
+        "owner": "",
+        "shortname": "ALG",
+        "name": "Algeria"
+    },
+    {
+        "id": "2FA9A518-DC1B-42CC-83D2-10FA310C70B4",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "060060",
+        "tertiarycolor": "E11129",
+        "group": "G",
+        "owner": "",
+        "shortname": "USA",
+        "name": "United States"
+    },
+    {
+        "id": "AF005383-0B75-4762-9189-38DD2F035CF4",
+        "secondarycolor": "FFFFFF",
+        "primarycolor": "DC171E",
+        "tertiarycolor": "0D509F",
+        "group": "H",
+        "owner": "",
+        "shortname": "RUS",
+        "name": "Russia"
+    }
+]
