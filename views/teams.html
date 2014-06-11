@@ -1,14 +1,13 @@
 <b>Teams:</b>
-<div class="scrollable" ng-controller="TeamsController">
-    <div class="scrollable-content">
-        <ul>
-            <li ng-repeat="team in teams|orderBy:orderProp">
+<div ng-controller="TeamsController">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="team in teams|orderBy:orderProp">
+
+                <img src="" ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/>
                 <span>{{team.name}}</span>
-                <span><img ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/></span>
-                <span ng-style="{background: '#' + team.primarycolor}">Primary</span>
+                <!--<span ng-style="{background: '#' + team.primarycolor}">Primary</span>
                 <span ng-style="{background: '#' + team.secondarycolor}">Secondary</span>
-                <span ng-style="{background: '#' + team.tertiarycolor}">Tertiary</span>
+                <span ng-style="{background: '#' + team.tertiarycolor}">Tertiary</span>-->
             </li>
         </ul>
-    </div>
 </div>

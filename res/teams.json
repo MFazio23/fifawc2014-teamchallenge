@@ -5,7 +5,7 @@
         "primarycolor": "179354",
         "tertiarycolor": "0B2D84",
         "group": "A",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "BRA",
         "name": "Brazil"
     },
@@ -15,7 +15,7 @@
         "primarycolor": "169254",
         "tertiarycolor": "FFFDFF",
         "group": "A",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "MEX",
         "name": "Mexico"
     },
@@ -25,7 +25,7 @@
         "primarycolor": "0473AA",
         "tertiarycolor": "000000",
         "group": "C",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "GRE",
         "name": "Greece"
     },
@@ -35,7 +35,7 @@
         "primarycolor": "DA010C",
         "tertiarycolor": "FFFFFD",
         "group": "B",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "ESP",
         "name": "Spain"
     },
@@ -45,7 +45,7 @@
         "primarycolor": "FF6600",
         "tertiarycolor": "022B87",
         "group": "B",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "NED",
         "name": "Netherlands"
     },
@@ -55,7 +55,7 @@
         "primarycolor": "FBEB0F",
         "tertiarycolor": "DC171E",
         "group": "C",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "COL",
         "name": "Colombia"
     },
@@ -65,7 +65,7 @@
         "primarycolor": "179355",
         "tertiarycolor": "FAEA10",
         "group": "A",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "CMR",
         "name": "Cameroon"
     },
@@ -75,7 +75,7 @@
         "primarycolor": "FFFFFF",
         "tertiarycolor": "000072",
         "group": "C",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "JPN",
         "name": "Japan"
     },
@@ -85,7 +85,7 @@
         "primarycolor": "DA171D",
         "tertiarycolor": "FFFFFD",
         "group": "A",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "CRO",
         "name": "Croatia"
     },
@@ -95,7 +95,7 @@
         "primarycolor": "0D51A4",
         "tertiarycolor": "FFF312",
         "group": "D",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "URU",
         "name": "Uruguay"
     },
@@ -105,7 +105,7 @@
         "primarycolor": "C80F1D",
         "tertiarycolor": "2B57AC",
         "group": "D",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "ENG",
         "name": "England"
     },
@@ -115,7 +115,7 @@
         "primarycolor": "EC7D23",
         "tertiarycolor": "FFFFFF",
         "group": "C",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "CIV",
         "name": "Ivory Coast"
     },
@@ -125,7 +125,7 @@
         "primarycolor": "179355",
         "tertiarycolor": "FFFFFF",
         "group": "D",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "ITA",
         "name": "Italy"
     },
@@ -135,7 +135,7 @@
         "primarycolor": "032A89",
         "tertiarycolor": "FFFFFF",
         "group": "D",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "CRC",
         "name": "Costa Rica"
     },
@@ -145,7 +145,7 @@
         "primarycolor": "DD151F",
         "tertiarycolor": "000000",
         "group": "E",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "SUI",
         "name": "Switzerland"
     },
@@ -155,7 +155,7 @@
         "primarycolor": "010066",
         "tertiarycolor": "D2081E",
         "group": "E",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "FRA",
         "name": "France"
     },
@@ -165,7 +165,7 @@
         "primarycolor": "3E9EC4",
         "tertiarycolor": "001262",
         "group": "F",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "ARG",
         "name": "Argentina"
     },
@@ -175,7 +175,7 @@
         "primarycolor": "FAEA10",
         "tertiarycolor": "DB161D",
         "group": "E",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "ECU",
         "name": "Ecuador"
     },
@@ -185,7 +185,7 @@
         "primarycolor": "007934",
         "tertiarycolor": "000000",
         "group": "F",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "NGA",
         "name": "Nigeria"
     },
@@ -195,7 +195,7 @@
         "primarycolor": "DC000E",
         "tertiarycolor": "179355",
         "group": "G",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "GHA",
         "name": "Ghana"
     },
@@ -205,7 +205,7 @@
         "primarycolor": "000C72",
         "tertiarycolor": "FFFFFF",
         "group": "F",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "BIH",
         "name": "Bosnia and Herzegovina"
     },
@@ -215,7 +215,7 @@
         "primarycolor": "0A51A1",
         "tertiarycolor": "000000",
         "group": "E",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "HON",
         "name": "Honduras"
     },
@@ -225,7 +225,7 @@
         "primarycolor": "179555",
         "tertiarycolor": "DC171E",
         "group": "F",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "IRN",
         "name": "Iran"
     },
@@ -235,7 +235,7 @@
         "primarycolor": "000200",
         "tertiarycolor": "F6DA0C",
         "group": "G",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "GER",
         "name": "Germany"
     },
@@ -245,7 +245,7 @@
         "primarycolor": "010080",
         "tertiarycolor": "C4101B",
         "group": "B",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "AUS",
         "name": "Australia"
     },
@@ -255,7 +255,7 @@
         "primarycolor": "012988",
         "tertiarycolor": "FFFFFF",
         "group": "B",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "CHI",
         "name": "Chile"
     },
@@ -265,7 +265,7 @@
         "primarycolor": "000000",
         "tertiarycolor": "DC171E",
         "group": "H",
-        "owner": "",
+        "owner": "Murphy McGraw",
         "shortname": "BEL",
         "name": "Belgium"
     },
@@ -275,7 +275,7 @@
         "primarycolor": "D71D22",
         "tertiarycolor": "FFFFFF",
         "group": "H",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "KOR",
         "name": "South Korea"
     },
@@ -285,7 +285,7 @@
         "primarycolor": "DA151C",
         "tertiarycolor": "FFFFFF",
         "group": "G",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "POR",
         "name": "Portugal"
     },
@@ -295,7 +295,7 @@
         "primarycolor": "179253",
         "tertiarycolor": "DD151F",
         "group": "H",
-        "owner": "",
+        "owner": "Sergio Piraino",
         "shortname": "ALG",
         "name": "Algeria"
     },
@@ -305,7 +305,7 @@
         "primarycolor": "060060",
         "tertiarycolor": "E11129",
         "group": "G",
-        "owner": "",
+        "owner": "Michael Fazio",
         "shortname": "USA",
         "name": "United States"
     },
@@ -315,7 +315,7 @@
         "primarycolor": "DC171E",
         "tertiarycolor": "0D509F",
         "group": "H",
-        "owner": "",
+        "owner": "Emad Kazmi",
         "shortname": "RUS",
         "name": "Russia"
     }

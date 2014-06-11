@@ -1,1 +1,8 @@
-Fixtures
+<div ng-controller="FixturesController">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="game in games|orderBy:orderProp">
+            <div ng-if="isESPN(game.channel)">ESPN GAME!</div>
+            <span>{{game.gameString}} - {{game.teama}} vs. {{game.teamb}} - {{game.channel}}</span>
+        </li>
+    </ul>
+</div>

@@ -9,6 +9,14 @@ angular
             .when('/teams', {
                 templateUrl: 'views/teams.html',
                 controller: 'TeamsController'
+            })
+            .when('/fixtures', {
+                templateUrl: 'views/fixtures.html',
+                controller: 'FixturesController'
+            })
+            .when('/owner/:ownerID', {
+                templateUrl: 'views/owner.html',
+                controller: 'OwnerController'
             });
 
         //TODO: Unless you can get this render properly from the server-side, the links break.
