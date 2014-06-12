@@ -1,26 +1,43 @@
 angular
     .module('fifaWC.services', [])
     .factory('Team', ['$q', '$http', function ($q, $http) {
-        return {getTeams: function () {
-            var deferred = $q.defer();
+        return {
+            getTeams: function () {
+                var deferred = $q.defer();
 
-            //Add this back when going live
-            azureClient
-                .getTable('teams')
-                .read()
-                .then(function (result) {
-                    deferred.resolve(result);
-                });
+                //Add this back when going live
+                azureClient
+                    .getTable('teams')
+                    .read()
+                    .then(function (result) {
+                        deferred.resolve(result);
+                    });
 
 
-            /*$q
-             .all([$http.get('res/teams.json')])
-             .then(function (results) {
-             deferred.resolve(results[0].data);
-             });*/
+                /*$q
+                 .all([$http.get('res/teams.json')])
+                 .then(function (results) {
+                 deferred.resolve(results[0].data);
+                 });*/
 
-            return deferred.promise;
-        }};
+                return deferred.promise;
+            },
+            getTeamsByOwner: function (owner) {
+                var deferred = $q.defer();
+
+                azureClient
+                    .getTable('teams')
+                    .where({owner: owner})
+                    .orderBy("name")
+                    .read()
+                    .then(function (result) {
+                        deferred.resolve(result);
+                    });
+
+                return deferred.promise;
+
+            }
+        };
     }])
     .factory('Owner', ['$q', '$http', function ($q, $http) {
         return {
@@ -45,6 +62,7 @@ angular
                 //Add this back when going live
                 azureClient
                     .getTable('owners')
+                    .orderBy("name")
                     .read()
                     .then(function (result) {
                         deferred.resolve(result);

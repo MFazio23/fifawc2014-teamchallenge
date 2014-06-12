@@ -18,13 +18,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!--<li class="active"><a href="#">Link</a></li>-->
-                <li ng-class="getActive('teams', this)"><a href="#teams">Teams</a></li>
-                <li ng-class="getActive('fixtures', this)"><a href="#fixtures">Fixtures</a></li>
-                <li class="dropdown">
+                <li ng-class="getActive('/teams')"><a href="#teams">Teams</a></li>
+                <li ng-class="getActive('/fixtures')"><a href="#fixtures">Fixtures</a></li>
+                <li ng-class="getActive('/owner')" class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Owners <b class="caret"></b></a>
                     <ul class="dropdown-menu">
 
-                        <li  ng-class="{active: $index==selectedIndex}" ng-repeat="owner in owners">
+                        <li ng-repeat="owner in owners">
                             <a href="#/owner/{{owner.id}}">{{owner.name}}</a>
                         </li>
                         <!--<li class="divider"></li>-->

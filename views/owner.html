@@ -1,5 +1,32 @@
-<div class="jumbotron" ng-controller="OwnerController">
-    <h1>{{owner.name}}</h1>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+<div ng-controller="OwnerController">
+    <h1 class="header">{{owner.name}}</h1>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="team in teams|orderBy:name">
+            <img src="" ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/>
+
+            <h2 class="owner-team-name">{{team.name}}</h2>
+            <!--<table>
+                <tbody class="owner-team-number-table">
+                <tr>
+                    <th>GP</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GF</th>
+                    <th>GA</th>
+                    <th>CS</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>-->
+        </li>
+    </ul>
 </div>

@@ -2,10 +2,10 @@
     <ul class="list-group">
         <div ng-repeat="game in games|orderBy:orderProp">
 
-            <h3 class="fixture-header" id="{{game.gameString}}" ng-if="newDate(game.gameTime, game.gameString)">{{headerString}}</h3>
+            <h3 class="header" id="{{game.gameString}}" ng-if="newDate(game.gameTime, game.gameString)">{{headerString}}</h3>
 
             <li class="fixture-game list-group-item">
-                <span>{{game.dateString}} - {{game.teamA}} vs. {{game.teamB}} - {{game.channel}}</span>
+                <span>{{game.timeString}} - {{game.teamA}} vs. {{game.teamB}} - {{game.channel}}</span>
             </li>
         </div>
     </ul>

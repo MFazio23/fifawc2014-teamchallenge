@@ -10,12 +10,8 @@ angular.module('fifaWC.controllers', [])
             $scope.owners = result;
         });
 
-        $scope.currentPage = $route.current.originalPath;
-        console.log("Current Page =", $scope.currentPage);
-
-        $scope.getActive = function(name, caller) {
-            console.log("Get Active =", name, caller);
-            return "";
+        $scope.getActive = function(name) {
+            return $route.current.originalPath.indexOf(name) >= 0 ? "active" : "";
         };
 
         $scope.orderProp = "name";
@@ -28,9 +24,13 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "name";
     })
-    .controller("OwnerController", function($scope, $q, $routeParams, Owner) {
+    .controller("OwnerController", function($scope, $q, $routeParams, Owner, Team) {
         Owner.getOwner($routeParams.ownerID).then(function(result) {
             $scope.owner = result;
+
+            Team.getTeamsByOwner($scope.owner.name).then(function(result) {
+                $scope.teams = result;
+            });
         });
     })
     .controller("FixturesController", function($scope, $q, $routeParams, Games) {
@@ -43,7 +43,7 @@ angular.module('fifaWC.controllers', [])
                 if(result.hasOwnProperty(g)) {
                     var game = result[g];
                     game.gameTime = new Date(game.gameTime);
-                    game.dateString = game.gameTime.toLocaleString();
+                    game.timeString = moment(game.gameTime).format("h:mm A") + " CDT";
                     game.gameString = game.teamA + game.teamB;
 
                     $scope.games.push(game);
