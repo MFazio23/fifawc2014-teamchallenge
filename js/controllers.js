@@ -5,10 +5,18 @@ angular.module('fifaWC.controllers', [])
     .controller("MainController", function ($scope) {
 
     })
-    .controller("HeaderController", function ($scope, $q, Owner) {
+    .controller("HeaderController", function ($scope, $q, $route, Owner) {
         Owner.getOwners().then(function(result) {
             $scope.owners = result;
         });
+
+        $scope.currentPage = $route.current.originalPath;
+        console.log("Current Page =", $scope.currentPage);
+
+        $scope.getActive = function(name, caller) {
+            console.log("Get Active =", name, caller);
+            return "";
+        };
 
         $scope.orderProp = "name";
 
@@ -48,7 +56,7 @@ angular.module('fifaWC.controllers', [])
 
             if(date !== layoutDate) {
                 layoutDate = date;
-                $scope.headerString = moment(dateTime).format("MMMM Do, YYYY");
+                $scope.headerString = moment(dateTime).format("dddd, MMMM Do, YYYY");
 
                 return true;
             }
