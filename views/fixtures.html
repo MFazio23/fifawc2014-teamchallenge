@@ -1,8 +1,12 @@
 <div ng-controller="FixturesController">
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="game in games|orderBy:orderProp">
-            <div ng-if="isESPN(game.channel)">ESPN GAME!</div>
-            <span>{{game.gameString}} - {{game.teama}} vs. {{game.teamb}} - {{game.channel}}</span>
-        </li>
+        <div ng-repeat="game in games|orderBy:orderProp">
+
+            <h3 class="fixture-header" id="{{game.gameString}}" ng-if="newDate(game.gameTime, game.gameString)">{{headerString}}</h3>
+
+            <li class="fixture-game list-group-item">
+                <span>{{game.dateString}} - {{game.teamA}} vs. {{game.teamB}} - {{game.channel}}</span>
+            </li>
+        </div>
     </ul>
 </div>

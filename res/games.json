@@ -1,402 +1,506 @@
-[
+{"games": [
     {
         "id": "D5ED3C40-83F9-4195-9A59-A99E543F4BFA",
-        "gametime": "2014-06-13T11:30:00.000Z",
-        "teama": "Mexico",
-        "teamb": "Cameroon",
+        "gameTime": "2014-06-13T16:00:00.000Z",
+        "teamA": "Mexico",
+        "teamB": "Cameroon",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "1FC97502-1052-49F8-9549-C914CF1D6937",
-        "gametime": "2014-06-13T14:30:00.000Z",
-        "teama": "Spain",
-        "teamb": "Netherlands",
+        "gameTime": "2014-06-13T19:00:00.000Z",
+        "teamA": "Spain",
+        "teamB": "Netherlands",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "48B964B6-80B6-4D76-943D-9113CFEB1E01",
-        "gametime": "2014-06-12T15:30:00.000Z",
-        "teama": "Brazil",
-        "teamb": "Croatia",
+        "gameTime": "2014-06-12T20:00:00.000Z",
+        "teamA": "Brazil",
+        "teamB": "Croatia",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "AB11B373-10A1-447A-9A3E-20BA76DFEC2D",
-        "gametime": "2014-06-14T14:30:00.000Z",
-        "teama": "Uruguay",
-        "teamb": "Costa Rica",
+        "gameTime": "2014-06-14T19:00:00.000Z",
+        "teamA": "Uruguay",
+        "teamB": "Costa Rica",
         "round": "Knockout Stage",
         "channel": "ABC"
     },
     {
         "id": "C9C64D1C-4E86-4899-AA44-E4F5FDCC9520",
-        "gametime": "2014-06-13T17:30:00.000Z",
-        "teama": "Chile",
-        "teamb": "Australia",
+        "gameTime": "2014-06-13T22:00:00.000Z",
+        "teamA": "Chile",
+        "teamB": "Australia",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "CDF53209-D929-4428-A59D-89BF16FC1DAE",
-        "gametime": "2014-06-14T11:30:00.000Z",
-        "teama": "Colombia",
-        "teamb": "Greece",
+        "gameTime": "2014-06-14T16:00:00.000Z",
+        "teamA": "Colombia",
+        "teamB": "Greece",
         "round": "Knockout Stage",
         "channel": "ABC"
     },
     {
         "id": "0C19E1A9-8ED6-47C3-8AD8-580E91C9D821",
-        "gametime": "2014-06-15T11:30:00.000Z",
-        "teama": "Switzerland",
-        "teamb": "Ecuador",
+        "gameTime": "2014-06-15T16:00:00.000Z",
+        "teamA": "Switzerland",
+        "teamB": "Ecuador",
         "round": "Knockout Stage",
         "channel": "ABC"
     },
     {
         "id": "97BA8083-4226-4C08-8C14-056BEEA558A8",
-        "gametime": "2014-06-15T17:30:00.000Z",
-        "teama": "Argentina",
-        "teamb": "Bosnia-Herzegovina",
+        "gameTime": "2014-06-15T22:00:00.000Z",
+        "teamA": "Argentina",
+        "teamB": "Bosnia-Herzegovina",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "92F1830A-5C35-4839-935F-4341A8C22A67",
-        "gametime": "2014-06-16T11:30:00.000Z",
-        "teama": "Germany",
-        "teamb": "Portugal",
+        "gameTime": "2014-06-16T16:00:00.000Z",
+        "teamA": "Germany",
+        "teamB": "Portugal",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "2B7362E8-1425-4E53-A40D-65C9AF82E401",
-        "gametime": "2014-06-14T17:30:00.000Z",
-        "teama": "England",
-        "teamb": "Italy",
+        "gameTime": "2014-06-14T22:00:00.000Z",
+        "teamA": "England",
+        "teamB": "Italy",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "582EC67B-1D7C-4CF5-B188-23B5005CB66D",
-        "gametime": "2014-06-14T20:30:00.000Z",
-        "teama": "Ivory Coast",
-        "teamb": "Japan",
+        "gameTime": "2014-06-15T01:00:00.000Z",
+        "teamA": "Ivory Coast",
+        "teamB": "Japan",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "1B15C41A-5C28-454C-A011-A4735E043B53",
-        "gametime": "2014-06-17T11:30:00.000Z",
-        "teama": "Belgium",
-        "teamb": "Algeria",
+        "gameTime": "2014-06-17T16:00:00.000Z",
+        "teamA": "Belgium",
+        "teamB": "Algeria",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "13F36A14-AA47-4C22-8631-3D66518613FD",
-        "gametime": "2014-06-15T14:30:00.000Z",
-        "teama": "France",
-        "teamb": "Honduras",
+        "gameTime": "2014-06-15T19:00:00.000Z",
+        "teamA": "France",
+        "teamB": "Honduras",
         "round": "Knockout Stage",
         "channel": "ABC"
     },
     {
         "id": "CA469A65-DF8D-48F2-95BB-8702E23C6F71",
-        "gametime": "2014-06-18T11:30:00.000Z",
-        "teama": "Australia",
-        "teamb": "Netherlands",
+        "gameTime": "2014-06-18T16:00:00.000Z",
+        "teamA": "Australia",
+        "teamB": "Netherlands",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "9E9223F7-4918-4CAF-8404-51DBD4CC5A8A",
-        "gametime": "2014-06-16T14:30:00.000Z",
-        "teama": "Iran",
-        "teamb": "Nigeria",
+        "gameTime": "2014-06-16T19:00:00.000Z",
+        "teamA": "Iran",
+        "teamB": "Nigeria",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "E8A097AE-3630-4C3C-BE1C-D092A29972D3",
-        "gametime": "2014-06-17T17:30:00.000Z",
-        "teama": "Russia",
-        "teamb": "South Korea",
+        "gameTime": "2014-06-17T22:00:00.000Z",
+        "teamA": "Russia",
+        "teamB": "South Korea",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "271263DC-29C5-4D55-B7C3-CD8C8426E7FD",
-        "gametime": "2014-06-18T14:30:00.000Z",
-        "teama": "Spain",
-        "teamb": "Chile",
+        "gameTime": "2014-06-18T19:00:00.000Z",
+        "teamA": "Spain",
+        "teamB": "Chile",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "C3967853-691C-4211-82AE-AC900884BDAC",
-        "gametime": "2014-06-19T14:30:00.000Z",
-        "teama": "Uruguay",
-        "teamb": "England",
+        "gameTime": "2014-06-19T19:00:00.000Z",
+        "teamA": "Uruguay",
+        "teamB": "England",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "6EB2B68E-843C-4553-873B-40D17609BE8B",
-        "gametime": "2014-06-16T17:30:00.000Z",
-        "teama": "Ghana",
-        "teamb": "United States",
+        "gameTime": "2014-06-16T22:00:00.000Z",
+        "teamA": "Ghana",
+        "teamB": "United States",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "A956E40D-F3D3-4B1A-8461-E138370D7822",
-        "gametime": "2014-06-19T11:30:00.000Z",
-        "teama": "Colombia",
-        "teamb": "Ivory Coast",
+        "gameTime": "2014-06-19T16:00:00.000Z",
+        "teamA": "Colombia",
+        "teamB": "Ivory Coast",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "8652CF96-C768-4C42-9E80-B94A074765BA",
-        "gametime": "2014-06-19T17:30:00.000Z",
-        "teama": "Japan",
-        "teamb": "Greece",
+        "gameTime": "2014-06-19T22:00:00.000Z",
+        "teamA": "Japan",
+        "teamB": "Greece",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "F20B0784-BBDE-4598-8445-081DFD939FDF",
-        "gametime": "2014-06-20T11:30:00.000Z",
-        "teama": "Italy",
-        "teamb": "Costa Rica",
+        "gameTime": "2014-06-20T16:00:00.000Z",
+        "teamA": "Italy",
+        "teamB": "Costa Rica",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "933CDD20-B6C5-41A2-B8EC-B259A5C42DB5",
-        "gametime": "2014-06-17T14:30:00.000Z",
-        "teama": "Brazil",
-        "teamb": "Mexico",
+        "gameTime": "2014-06-17T19:00:00.000Z",
+        "teamA": "Brazil",
+        "teamB": "Mexico",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "570B20A6-45F3-465A-AD96-27DBD1234C49",
-        "gametime": "2014-06-21T11:30:00.000Z",
-        "teama": "Argentina",
-        "teamb": "Iran",
+        "gameTime": "2014-06-21T16:00:00.000Z",
+        "teamA": "Argentina",
+        "teamB": "Iran",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "C0FA441C-7D99-42A8-B995-012995D91EA6",
-        "gametime": "2014-06-21T14:30:00.000Z",
-        "teama": "Germany",
-        "teamb": "Ghana",
+        "gameTime": "2014-06-21T19:00:00.000Z",
+        "teamA": "Germany",
+        "teamB": "Ghana",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "C4F7FADD-B5DC-4EBE-ADD7-12181AE76F6E",
-        "gametime": "2014-06-20T14:30:00.000Z",
-        "teama": "Switzerland",
-        "teamb": "France",
+        "gameTime": "2014-06-20T19:00:00.000Z",
+        "teamA": "Switzerland",
+        "teamB": "France",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "D1D790DD-FAE3-43EB-8D23-CC27E8CF46CD",
-        "gametime": "2014-06-21T17:30:00.000Z",
-        "teama": "Nigeria",
-        "teamb": "Bosnia-Herzegovina",
+        "gameTime": "2014-06-21T22:00:00.000Z",
+        "teamA": "Nigeria",
+        "teamB": "Bosnia-Herzegovina",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "EE91109A-6658-411A-91D2-DBCBB8B9A0FB",
-        "gametime": "2014-06-23T11:30:00.000Z",
-        "teama": "Australia",
-        "teamb": "Spain",
+        "gameTime": "2014-06-23T16:00:00.000Z",
+        "teamA": "Australia",
+        "teamB": "Spain",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "02C22D08-CCBE-49E9-B33D-AF2BBCF5389F",
-        "gametime": "2014-06-22T14:30:00.000Z",
-        "teama": "South Korea",
-        "teamb": "Algeria",
+        "gameTime": "2014-06-22T19:00:00.000Z",
+        "teamA": "South Korea",
+        "teamB": "Algeria",
         "round": "Knockout Stage",
         "channel": "ABC"
     },
     {
         "id": "AE38D48C-293D-4EDD-9750-992F1BA97E64",
-        "gametime": "2014-06-23T15:30:00.000Z",
-        "teama": "Croatia",
-        "teamb": "Mexico",
+        "gameTime": "2014-06-23T20:00:00.000Z",
+        "teamA": "Croatia",
+        "teamB": "Mexico",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "D961E877-1E3E-43F2-8B15-4FBB628E22C9",
-        "gametime": "2014-06-22T17:30:00.000Z",
-        "teama": "United States",
-        "teamb": "Portugal",
+        "gameTime": "2014-06-22T22:00:00.000Z",
+        "teamA": "United States",
+        "teamB": "Portugal",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "F758A377-3A36-4C31-8142-F74F3CEC0A60",
-        "gametime": "2014-06-23T15:30:00.000Z",
-        "teama": "Cameroon",
-        "teamb": "Brazil",
+        "gameTime": "2014-06-23T20:00:00.000Z",
+        "teamA": "Cameroon",
+        "teamB": "Brazil",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "7918C925-287D-4D33-A90F-3D188671330E",
-        "gametime": "2014-06-24T11:30:00.000Z",
-        "teama": "Italy",
-        "teamb": "Uruguay",
+        "gameTime": "2014-06-24T16:00:00.000Z",
+        "teamA": "Italy",
+        "teamB": "Uruguay",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "8D7D0BB9-C2B6-404B-B7CC-C12826692722",
-        "gametime": "2014-06-24T15:30:00.000Z",
-        "teama": "Japan",
-        "teamb": "Colombia",
+        "gameTime": "2014-06-24T20:00:00.000Z",
+        "teamA": "Japan",
+        "teamB": "Colombia",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "2791F1DD-0C88-4650-BD3C-F5AE1849E1A7",
-        "gametime": "2014-06-25T11:30:00.000Z",
-        "teama": "Nigeria",
-        "teamb": "Argentina",
+        "gameTime": "2014-06-25T16:00:00.000Z",
+        "teamA": "Nigeria",
+        "teamB": "Argentina",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "4A172C51-52F8-45E1-BD78-CED2553ECC04",
-        "gametime": "2014-06-25T11:30:00.000Z",
-        "teama": "Bosnia-Herzegovina",
-        "teamb": "Iran",
+        "gameTime": "2014-06-25T16:00:00.000Z",
+        "teamA": "Bosnia-Herzegovina",
+        "teamB": "Iran",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "A61CE469-DCFD-44F4-BD73-D028531E0FDF",
-        "gametime": "2014-06-24T15:30:00.000Z",
-        "teama": "Greece",
-        "teamb": "Ivory Coast",
+        "gameTime": "2014-06-24T20:00:00.000Z",
+        "teamA": "Greece",
+        "teamB": "Ivory Coast",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "B3558E1E-084B-47D3-85D6-69011425B02B",
-        "gametime": "2014-06-25T15:30:00.000Z",
-        "teama": "Ecuador",
-        "teamb": "France",
+        "gameTime": "2014-06-25T20:00:00.000Z",
+        "teamA": "Ecuador",
+        "teamB": "France",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "EFFC4324-5A3F-4DB6-B000-6D29582E9A74",
-        "gametime": "2014-06-26T11:30:00.000Z",
-        "teama": "Portugal",
-        "teamb": "Ghana",
+        "gameTime": "2014-06-26T16:00:00.000Z",
+        "teamA": "Portugal",
+        "teamB": "Ghana",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "959193C9-562D-48F6-BA20-52354FBED790",
-        "gametime": "2014-06-25T15:30:00.000Z",
-        "teama": "Honduras",
-        "teamb": "Switzerland",
+        "gameTime": "2014-06-25T20:00:00.000Z",
+        "teamA": "Honduras",
+        "teamB": "Switzerland",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "85977A73-100D-4075-855A-9EA7F2880585",
-        "gametime": "2014-06-26T15:30:00.000Z",
-        "teama": "South Korea",
-        "teamb": "Belgium",
+        "gameTime": "2014-06-26T20:00:00.000Z",
+        "teamA": "South Korea",
+        "teamB": "Belgium",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "8B3493D1-27C1-453D-9B04-CCB067606D3B",
-        "gametime": "2014-06-23T11:30:00.000Z",
-        "teama": "Netherlands",
-        "teamb": "Chile",
+        "gameTime": "2014-06-23T16:00:00.000Z",
+        "teamA": "Netherlands",
+        "teamB": "Chile",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "174643AE-9A7E-4540-B5EA-AFCA60130406",
-        "gametime": "2014-06-26T11:30:00.000Z",
-        "teama": "United States",
-        "teamb": "Germany",
+        "gameTime": "2014-06-26T16:00:00.000Z",
+        "teamA": "United States",
+        "teamB": "Germany",
         "round": "Knockout Stage",
         "channel": "ESPN"
     },
     {
         "id": "6F6A4261-AFA0-452E-ACFC-49A1822E5E69",
-        "gametime": "2014-06-22T11:30:00.000Z",
-        "teama": "Belgium",
-        "teamb": "Russia",
+        "gameTime": "2014-06-22T16:00:00.000Z",
+        "teamA": "Belgium",
+        "teamB": "Russia",
         "round": "Knockout Stage",
         "channel": "ABC"
     },
     {
         "id": "54AB8EBC-923C-448A-AFCC-A2953444DA7B",
-        "gametime": "2014-06-29T15:30:00.000Z",
-        "teama": "1D",
-        "teamb": "2C",
+        "gameTime": "2014-06-29T20:00:00.000Z",
+        "teamA": "1D",
+        "teamB": "2C",
         "round": "Round of 16",
         "channel": "ESPN"
     },
     {
         "id": "B005DF93-6050-4FD9-8664-8191F1638DF8",
-        "gametime": "2014-06-26T15:30:00.000Z",
-        "teama": "Algeria",
-        "teamb": "Russia",
+        "gameTime": "2014-06-26T20:00:00.000Z",
+        "teamA": "Algeria",
+        "teamB": "Russia",
         "round": "Knockout Stage",
         "channel": "ESPN2"
     },
     {
         "id": "07EBC9E5-741A-49C9-A1D7-0C08F1FB6BE9",
-        "gametime": "2014-06-30T11:30:00.000Z",
-        "teama": "1E",
-        "teamb": "2F",
+        "gameTime": "2014-06-30T16:00:00.000Z",
+        "teamA": "1E",
+        "teamB": "2F",
         "round": "Round of 16",
         "channel": "ESPN"
     },
     {
         "id": "23B452EF-DD8F-419C-86D9-339AB98CF7A6",
-        "gametime": "2014-07-01T15:30:00.000Z",
-        "teama": "1H",
-        "teamb": "2G",
+        "gameTime": "2014-07-01T20:00:00.000Z",
+        "teamA": "1H",
+        "teamB": "2G",
         "round": "Round of 16",
         "channel": "ESPN"
     },
     {
         "id": "6A834B7B-E0DE-42BD-9936-CE67A2230986",
-        "gametime": "2014-06-30T15:30:00.000Z",
-        "teama": "1G",
-        "teamb": "2H",
+        "gameTime": "2014-06-30T20:00:00.000Z",
+        "teamA": "1G",
+        "teamB": "2H",
         "round": "Round of 16",
         "channel": "ESPN"
     },
     {
         "id": "5E173674-CE23-462C-8781-E9F8CE24CEBE",
-        "gametime": "2014-07-01T11:30:00.000Z",
-        "teama": "1F",
-        "teamb": "2E",
+        "gameTime": "2014-07-01T16:00:00.000Z",
+        "teamA": "1F",
+        "teamB": "2E",
         "round": "Round of 16",
         "channel": "ESPN"
+    },
+    {
+        "id": "815F4310-123E-418E-8713-A9F4D3BA13AD",
+        "gameTime": "2014-06-29T16:00:00.000Z",
+        "teamA": "1B",
+        "teamB": "2A",
+        "round": "Round of 16",
+        "channel": "ESPN"
+    },
+    {
+        "id": "82787E0C-2B89-4D6E-98D8-21D6DAE4F8A3",
+        "gameTime": "2014-06-28T20:00:00.000Z",
+        "teamA": "1C",
+        "teamB": "2D",
+        "round": "Round of 16",
+        "channel": "ABC"
+    },
+    {
+        "id": "A4391652-C6F0-4061-896C-DF29793CD072",
+        "gameTime": "2014-07-04T20:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Quarterfinals",
+        "channel": "ESPN"
+    },
+    {
+        "id": "699583B9-596E-4755-9665-9605AB00D2DA",
+        "gameTime": "2014-07-05T16:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Quarterfinals",
+        "channel": "ESPN2"
+    },
+    {
+        "id": "098ACE39-AEF8-4656-A017-371BCFA97BE6",
+        "gameTime": "2014-06-28T16:00:00.000Z",
+        "teamA": "1A",
+        "teamB": "2B",
+        "round": "Round of 16",
+        "channel": "ABC"
+    },
+    {
+        "id": "81500ABB-D1FA-40B5-807A-1E0456F9B770",
+        "gameTime": "2014-07-05T20:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Quarterfinals",
+        "channel": "ESPN"
+    },
+    {
+        "id": "CA3E2303-DBDA-49C4-9169-4509BD2B24B9",
+        "gameTime": "2014-07-09T20:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Semifinals",
+        "channel": "ESPN"
+    },
+    {
+        "id": "CE8A4FC6-A12D-4207-81F3-DEEA805082F5",
+        "gameTime": "2014-07-12T20:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Third-place match",
+        "channel": "ESPN"
+    },
+    {
+        "id": "2F71FE41-E242-4D7F-B690-147A219B9B3D",
+        "gameTime": "2014-07-08T20:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Semifinals",
+        "channel": "ESPN"
+    },
+    {
+        "id": "01B8892B-B85D-4CF1-9B1F-BD1C263A0142",
+        "gameTime": "2014-07-04T16:00:00.000Z",
+        "teamA": null,
+        "teamB": null,
+        "round": "Quarterfinals",
+        "channel": "ESPN2"
+    },
+    {
+        "id": "725692CB-C1EB-40C8-91E2-13EAAFECB738",
+        "gameTime": "2014-06-20T22:00:00.000Z",
+        "teamA": "Honduras",
+        "teamB": "Ecuador",
+        "round": "Knockout Stage",
+        "channel": "ESPN"
+    },
+    {
+        "id": "93B4ADB2-A660-4ED1-AD2A-AE04C5016D71",
+        "gameTime": "2014-06-18T22:00:00.000Z",
+        "teamA": "Cameroon",
+        "teamB": "Croatia",
+        "round": "Knockout Stage",
+        "channel": "ESPN"
+    },
+    {
+        "id": "4EE062CD-B43F-499E-A750-CFFF42519E1B",
+        "gameTime": "2014-06-24T16:00:00.000Z",
+        "teamA": "Costa Rica",
+        "teamB": "England",
+        "round": "Knockout Stage",
+        "channel": "ESPN2"
     }
-]
+]}

@@ -26,6 +26,7 @@ angular.module('fifaWC.controllers', [])
         });
     })
     .controller("FixturesController", function($scope, $q, $routeParams, Games) {
+        var layoutDate = -1;
         Games.getGames().then(function(result) {
 
             $scope.games = [];
@@ -33,17 +34,27 @@ angular.module('fifaWC.controllers', [])
             for(var g in result) {
                 if(result.hasOwnProperty(g)) {
                     var game = result[g];
-                    game.gametime = new Date(game.gametime);
-                    game.gameString = game.gametime.toLocaleString();
+                    game.gameTime = new Date(game.gameTime);
+                    game.dateString = game.gameTime.toLocaleString();
+                    game.gameString = game.teamA + game.teamB;
 
                     $scope.games.push(game);
                 }
             }
         });
 
-        $scope.isESPN = function(channel) {
-            return channel === 'ESPN';
+        $scope.newDate = function(dateTime, gameString) {
+            var date = dateTime.getMonth() + dateTime.getDate();
+
+            if(date !== layoutDate) {
+                layoutDate = date;
+                $scope.headerString = moment(dateTime).format("MMMM Do, YYYY");
+
+                return true;
+            }
+
+            return false;
         };
 
-        $scope.orderProp = "gametime";
+        $scope.orderProp = "gameTime";
     });

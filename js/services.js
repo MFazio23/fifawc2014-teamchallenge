@@ -66,6 +66,7 @@ angular
                 var deferred = $q.defer();
                 azureClient
                     .getTable('games')
+                    .take(63)
                     .read()
                     .then(function (result) {
                         deferred.resolve(result);

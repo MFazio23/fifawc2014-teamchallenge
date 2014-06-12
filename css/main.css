@@ -5,3 +5,11 @@
 .brand-image {
     height: 100%
 }
+
+.fixture-header {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fixture-game:last-child {
+    margin-bottom: -1px;
+}
