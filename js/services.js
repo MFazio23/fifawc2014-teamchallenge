@@ -5,19 +5,19 @@ angular
             var deferred = $q.defer();
 
             //Add this back when going live
-            /*azureClient
-             .getTable('teams')
-             .read()
-             .then(function (result) {
-             deferred.resolve(result);
-             });
-             */
-
-            $q
-                .all([$http.get('res/teams.json')])
-                .then(function (results) {
-                    deferred.resolve(results[0].data);
+            azureClient
+                .getTable('teams')
+                .read()
+                .then(function (result) {
+                    deferred.resolve(result);
                 });
+
+
+            /*$q
+             .all([$http.get('res/teams.json')])
+             .then(function (results) {
+             deferred.resolve(results[0].data);
+             });*/
 
             return deferred.promise;
         }};
@@ -43,19 +43,18 @@ angular
                 var deferred = $q.defer();
 
                 //Add this back when going live
-                /*azureClient
-                 .getTable('owners')
-                 .read()
-                 .then(function (result) {
-                 deferred.resolve(result);
-                 });
-                 */
-
-                $q
-                    .all([$http.get('res/owners.json')])
-                    .then(function (results) {
-                        deferred.resolve(results[0].data);
+                azureClient
+                    .getTable('owners')
+                    .read()
+                    .then(function (result) {
+                        deferred.resolve(result);
                     });
+
+                /*$q
+                 .all([$http.get('res/owners.json')])
+                 .then(function (results) {
+                 deferred.resolve(results[0].data);
+                 });*/
 
                 return deferred.promise;
             }
