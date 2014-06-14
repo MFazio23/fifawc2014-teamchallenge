@@ -14,6 +14,10 @@ angular
                 templateUrl: 'views/fixtures.html',
                 controller: 'FixturesController'
             })
+            .when('/table', {
+                templateUrl: 'views/table.html',
+                controller: 'TableController'
+            })
             .when('/owner/:ownerID', {
                 templateUrl: 'views/owner.html',
                 controller: 'OwnerController'

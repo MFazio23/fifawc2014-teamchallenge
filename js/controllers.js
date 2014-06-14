@@ -24,6 +24,13 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "name";
     })
+    .controller("TableController", function($scope, Team) {
+        Team.getTeams().then(function(result) {
+            $scope.teams = result;
+        });
+
+        $scope.orderProp = "name";
+    })
     .controller("OwnerController", function($scope, $q, $routeParams, Owner, Team) {
         Owner.getOwner($routeParams.ownerID).then(function(result) {
             $scope.owner = result;
@@ -42,8 +49,8 @@ angular.module('fifaWC.controllers', [])
             for(var g in result) {
                 if(result.hasOwnProperty(g)) {
                     var game = result[g];
-                    game.gameTime = new Date(game.gameTime);
-                    game.timeString = moment(game.gameTime).format("h:mm A") + " CDT";
+                    game.gameTime = new Date(game.startTime);
+                    game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
                     game.gameString = game.teamA + game.teamB;
 
                     $scope.games.push(game);

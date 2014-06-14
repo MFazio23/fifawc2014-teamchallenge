@@ -1,11 +1,16 @@
 'use strict';
 
-angular.module('fifaWC', [
-    "ngRoute",
-    "fifaWC.controllers",
-    "fifaWC.services",
-    "fifaWC.routing"
-]);
+angular
+    .module(
+        'fifaWC',
+        [
+            "ngRoute",
+            "fifaWC.config",
+            "fifaWC.controllers",
+            "fifaWC.services",
+            "fifaWC.routing"
+        ]
+    );
 
 // Azure client
 var azureClient = new WindowsAzure.MobileServiceClient(

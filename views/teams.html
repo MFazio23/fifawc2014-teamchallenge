@@ -1,10 +1,10 @@
-<b>Teams:</b>
 <div ng-controller="TeamsController">
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="team in teams|orderBy:orderProp">
+            <li class="list-group-item" ng-repeat="team in teams|orderBy:['group', 'name']">
 
                 <img src="" ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/>
-                <span>{{team.name}}</span>
+                <h3 class="team-name header">{{team.name}}</h3>
+                <span>Group {{team.group}}</span>
                 <!--<span ng-style="{background: '#' + team.primarycolor}">Primary</span>
                 <span ng-style="{background: '#' + team.secondarycolor}">Secondary</span>
                 <span ng-style="{background: '#' + team.tertiarycolor}">Tertiary</span>-->
