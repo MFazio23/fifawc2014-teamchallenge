@@ -1,1 +1,16 @@
-Dashboard/Home
+<div ng-controller="DashboardController">
+    <h2 class="header">Current Standings</h2>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="owner in owners|orderBy:points">
+            <span>#{{$index + 1}}</span>
+            <span>{{owner.name}} - {{owner.points}} points</span>
+        </li>
+    </ul>
+
+    <h2 class="header">Today's Matches</h2>
+    <ul class="list-group">
+        <li class="list-group-item fixture-game" ng-repeat="game in games|orderBy:startTime">
+            <span>{{game.timeString}} - {{game.homeTeam}} ({{game.homeScore}}) vs. {{game.awayTeam}} ({{game.awayScore}}) - {{game.status}}</span>
+        </li>
+    </ul>
+</div>

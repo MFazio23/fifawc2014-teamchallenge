@@ -7,29 +7,29 @@ angular
 
                 //Add this back when going live
                 /*azureClient
-                    .getTable('teams')
-                    .read()
-                    .then(function (result) {
-                        deferred.resolve(result);
-                    });*/
+                 .getTable('teams')
+                 .read()
+                 .then(function (result) {
+                 deferred.resolve(result);
+                 });*/
 
                 $q
                     .all(
                         [azureClient.getTable('teams').read(),
-                        $http.get(kimonoConfig.kimonoTeamsURL)]
+                            $http.get(kimonoConfig.kimonoTeamsURL)]
                     )
                     .then(
-                    function(result) {
+                    function (result) {
                         var teams = [];
                         var azureTeams = {};
-                        $.each(result[0], function(ind, aTeam) {
+                        $.each(result[0], function (ind, aTeam) {
                             delete aTeam.id;
                             azureTeams[aTeam.name] = aTeam;
                         });
 
-                        $.each(result[1].data, function(ind, kTeam) {
+                        $.each(result[1].data, function (ind, kTeam) {
                             var aTeam = azureTeams[kTeam.name];
-                            if(typeof aTeam === 'undefined') console.log("Not found =", kTeam.name);
+                            if (typeof aTeam === 'undefined') console.log("Not found =", kTeam.name);
 
                             teams.push($.extend(kTeam, aTeam));
                         });
@@ -106,79 +106,110 @@ angular
             getGames: function () {
                 var deferred = $q.defer();
                 /*azureClient
-                    .getTable('games')
-                    .take(63)
-                    .read()
-                    .then(function (result) {
-                        deferred.resolve(result);
-                    });*/
+                 .getTable('games')
+                 .take(63)
+                 .read()
+                 .then(function (result) {
+                 deferred.resolve(result);
+                 });*/
 
                 $q
                     .all([
-                            $http.get(kimonoConfig.kimonoMatchesURL),
-                            $http.get(kimonoConfig.kimonoTeamsURL)
-                        ])
+                        $http.get(kimonoConfig.kimonoMatchesURL),
+                        $http.get(kimonoConfig.kimonoTeamsURL)
+                    ])
                     .then(
-                        function(result) {
-                            var matches = [],
-                                teams = {};
+                    function (result) {
+                        var matches = [],
+                            teams = {};
 
-                            $.each(result[1].data, function(ind, team) {
-                                teams[team.id] = team;
-                            });
+                        $.each(result[1].data, function (ind, team) {
+                            teams[team.id] = team;
+                        });
 
-                            $.each(result[0].data, function(ind, match) {
+                        $.each(result[0].data, function (ind, match) {
 
-                                match.awayTeam = teams[match.awayTeamId].name;
-                                match.homeTeam = teams[match.homeTeamId].name;
+                            match.awayTeam = teams[match.awayTeamId].name;
+                            match.homeTeam = teams[match.homeTeamId].name;
 
-                                matches.push(match);
-                            });
+                            matches.push(match);
+                        });
 
-                            deferred.resolve(matches);
-                        }
-                    );
+                        deferred.resolve(matches);
+                    }
+                );
 
                 return deferred.promise;
             }
         };
-    }]).factory('Rankings', ['$q', '$http', 'kimonoConfig', function ($q, $http, kimonoConfig) {
+    }]).factory('Rankings', ['$q', '$http', 'Team', 'Games', function ($q, $http, Team, Games) {
+
+        var getPointsFromGame = function (game) {
+            var points = { };
+
+            points[game.awayTeam] = getPointsObject(game.awayScore, game.homeScore);
+            points[game.homeTeam] = getPointsObject(game.homeScore, game.awayScore);
+
+            return points;
+        };
+
+        function getPointsObject(teamScore, opponentScore) {
+            var pointsObj = {
+                won: teamScore > opponentScore,
+                lost: teamScore < opponentScore,
+                drew: teamScore == opponentScore,
+                goalsFor: teamScore,
+                goalsAgainst: opponentScore,
+                shutout: opponentScore === 0
+            };
+
+            var score = 0;
+            score += pointsObj.won ? 3 : 0;
+            score += pointsObj.drew ? 1 : 0;
+            score += pointsObj.goalsFor > 3 ? 3 : pointsObj.goalsFor;
+            score += pointsObj.shutout ? 3 : 0;
+
+            pointsObj.score = score;
+
+            return pointsObj;
+        }
+
         return {
-            getGames: function () {
+            getPointsForTeam: getPointsFromGame,
+            getRankingsByOwner: function () {
                 var deferred = $q.defer();
-                /*azureClient
-                    .getTable('games')
-                    .take(63)
-                    .read()
-                    .then(function (result) {
-                        deferred.resolve(result);
-                    });*/
 
-                $q
-                    .all([
-                            $http.get(kimonoConfig.kimonoMatchesURL),
-                            $http.get(kimonoConfig.kimonoTeamsURL)
-                        ])
-                    .then(
-                        function(result) {
-                            var matches = [],
-                                teams = {};
+                $q.all([
+                        Team.getTeams(),
+                        Games.getGames()
+                    ]).
+                    then(function (result) {
+                        var teams = {},
+                            owners = {};
 
-                            $.each(result[1].data, function(ind, team) {
-                                teams[team.id] = team;
-                            });
+                        $.each(result[0], function (ind, team) {
+                            team.points = 0;
+                            teams[team.name] = team;
+                        });
 
-                            $.each(result[0].data, function(ind, match) {
+                        $.each(result[1], function (ind, game) {
+                            if (game.status !== 'Pre-game') {
+                                $.each(getPointsFromGame(game), function (ind, teamGame) {
+                                    teams[ind].points += teamGame.score;
+                                });
+                            }
+                        });
 
-                                match.awayTeam = teams[match.awayTeamId].name;
-                                match.homeTeam = teams[match.homeTeamId].name;
+                        $.each(teams, function (ind, team) {
+                            if (typeof owners[team.owner] === 'undefined') {
+                                owners[team.owner] = { points: 0};
+                            }
+                            owners[team.owner].points += team.points;
+                        });
 
-                                matches.push(match);
-                            });
+                        deferred.resolve(owners);
 
-                            deferred.resolve(matches);
-                        }
-                    );
+                    });
 
                 return deferred.promise;
             }

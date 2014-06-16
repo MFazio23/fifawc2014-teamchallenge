@@ -72,4 +72,31 @@ angular.module('fifaWC.controllers', [])
         };
 
         $scope.orderProp = "gameTime";
+    })
+    .controller("DashboardController", function($scope, $q, $routeParams, Games, Rankings) {
+        Rankings.getRankingsByOwner().then(function(result) {
+            $scope.owners = [];
+            $.each(result, function(ind, owner) {
+                $scope.owners.push({name: ind, points: owner.points});
+            });
+        });
+
+        Games.getGames().then(function(result) {
+            $scope.games = [];
+            $.each(result, function(ind, game) {
+                var start = moment(game.startTime);
+                var format = "YYYY-MM-DD";
+
+                //console.log("Dates = ",start.format(format),moment().format(format),start.format(format) === moment().format(format))
+                if(start.format(format) === moment().format(format)) {
+                    game.gameTime = new Date(game.startTime);
+                    game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
+                    game.gameString = game.teamA + game.teamB;
+
+                    $scope.games.push(game);
+                }
+            });
+
+            console.log("Games =", $scope.games.length, JSON.stringify($scope.games));
+        });
     });

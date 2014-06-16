@@ -4,7 +4,7 @@ angular
         $routeProvider
             .when('/', {
                 templateUrl: 'views/dashboard.html',
-                controller: 'MainController'
+                controller: 'DashboardController'
             })
             .when('/teams', {
                 templateUrl: 'views/teams.html',
