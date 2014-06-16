@@ -13,3 +13,4 @@ Ideas:
             - Small flags below team name?
         - Today's games
     - Show/hide scores
+    - Add current time to dashboard game listing

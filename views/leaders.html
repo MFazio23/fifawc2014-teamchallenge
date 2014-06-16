@@ -1,0 +1,19 @@
+<div ng-controller="LeadersController">
+
+    <h2 class="header">Goals</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="leader in goalLeaders">
+            <span>{{leader.firstName}} {{leader.lastName}} - {{leader.goals}}</span>
+        </li>
+    </ul>
+
+    <h2 class="header">Assists</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="leader in assistLeaders">
+            <span>{{leader.firstName}} {{leader.lastName}} - {{leader.assists}}</span>
+        </li>
+    </ul>
+
+</div>

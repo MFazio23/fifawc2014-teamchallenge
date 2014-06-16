@@ -214,4 +214,40 @@ angular
                 return deferred.promise;
             }
         };
+    }]).factory('Leaders', ['$q', '$http', 'Team', 'kimonoConfig', function ($q, $http, Team, kimonoConfig) {
+
+        return {
+            getLeaders: function () {
+                var deferred = $q.defer();
+
+                $q.all([
+                        $http.get(kimonoConfig.kimonoPlayersURL.replace("{0}", "goals,-1,name")),
+                        $http.get(kimonoConfig.kimonoPlayersURL.replace("{0}", "assists,-1,name")),
+                        Team.getTeams()
+                    ]).then(function (result) {
+                        var leaders = {
+                                goalLeaders: [],
+                                assistLeaders: []
+                            },
+                            teams = {};
+                        $.each(result[2], function(ind, team) {
+                            teams[result.id] = team;
+                        });
+
+                        $.each(result[0].data, function(ind, leader) {
+                            leader.team = teams[leader.teamID];
+                            leaders.goalLeaders.push(leader);
+                        });
+
+                        $.each(result[1].data, function(ind, leader) {
+                            leader.team = teams[leader.teamID];
+                            leaders.assistLeaders.push(leader);
+                        });
+
+                        deferred.resolve(leaders);
+                    });
+
+                return deferred.promise;
+            }
+        };
     }]);

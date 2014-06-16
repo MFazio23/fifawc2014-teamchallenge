@@ -18,6 +18,10 @@ angular
                 templateUrl: 'views/table.html',
                 controller: 'TableController'
             })
+            .when('/leaders', {
+                templateUrl: 'views/leaders.html',
+                controller: 'LeadersController'
+            })
             .when('/owner/:ownerID', {
                 templateUrl: 'views/owner.html',
                 controller: 'OwnerController'

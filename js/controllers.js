@@ -93,8 +93,15 @@ angular.module('fifaWC.controllers', [])
                     game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
                     game.gameString = game.teamA + game.teamB;
 
+                    console.log("Game =", game);
+
                     $scope.games.push(game);
                 }
             });
+        });
+    }).controller("LeadersController", function($scope, $q, $routeParams, Leaders) {
+        Leaders.getLeaders().then(function(result) {
+            $scope.goalLeaders = result.goalLeaders;
+            $scope.assistLeaders = result.assistLeaders;
         });
     });
