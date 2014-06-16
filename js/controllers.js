@@ -77,6 +77,7 @@ angular.module('fifaWC.controllers', [])
         Rankings.getRankingsByOwner().then(function(result) {
             $scope.owners = [];
             $.each(result, function(ind, owner) {
+                console.log("Owner =", ind, owner.points);
                 $scope.owners.push({name: ind, points: owner.points});
             });
         });
@@ -87,7 +88,6 @@ angular.module('fifaWC.controllers', [])
                 var start = moment(game.startTime);
                 var format = "YYYY-MM-DD";
 
-                //console.log("Dates = ",start.format(format),moment().format(format),start.format(format) === moment().format(format))
                 if(start.format(format) === moment().format(format)) {
                     game.gameTime = new Date(game.startTime);
                     game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
@@ -96,7 +96,5 @@ angular.module('fifaWC.controllers', [])
                     $scope.games.push(game);
                 }
             });
-
-            console.log("Games =", $scope.games.length, JSON.stringify($scope.games));
         });
     });

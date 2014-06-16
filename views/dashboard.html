@@ -1,7 +1,7 @@
 <div ng-controller="DashboardController">
     <h2 class="header">Current Standings</h2>
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="owner in owners|orderBy:points">
+        <li class="list-group-item" ng-repeat="owner in owners|orderBy:'points':true">
             <span>#{{$index + 1}}</span>
             <span>{{owner.name}} - {{owner.points}} points</span>
         </li>
