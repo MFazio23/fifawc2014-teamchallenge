@@ -1,12 +1,14 @@
 <div ng-controller="OwnerController">
     <h1 class="header">{{owner.name}}</h1>
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="team in teams|orderBy:name">
-            <a class="basic-link" href="http://en.wikipedia.org/wiki/{{team.wikipagename}}">
+        <a class="basic-link" ng-repeat="team in teams|orderBy:name"
+           href="http://en.wikipedia.org/wiki/{{team.wikipagename}}">
+            <li class="list-group-item">
+
                 <img src="" ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/>
 
                 <h2 class="team-name header">{{team.name}}</h2>
-            </a>
-        </li>
+            </li>
+        </a>
     </ul>
 </div>
