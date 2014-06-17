@@ -24,6 +24,38 @@ body {
     vertical-align: middle;
 }
 
+.standings-container {
+    padding: 10px 5px;
+}
+
 .owner-team-number-table {
     display: inline;
+}
+
+.owner-container {
+    overflow: hidden;
+}
+
+.owner-item {
+    float: left;
+}
+
+.owner-item-details {
+    padding-left: 5px;
+    font-size: 24px;
+}
+
+.item-detail {
+    padding-left: 8px;
+}
+
+.ranking {
+    font-size: 60px;
+    width: 45px;
+}
+
+.mini-flag {
+    width: 35px;
+    height: 23px;
+    padding-left: 1px;
 }

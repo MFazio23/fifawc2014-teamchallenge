@@ -73,12 +73,28 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "gameTime";
     })
-    .controller("DashboardController", function($scope, $q, $routeParams, Games, Rankings) {
+    .controller("DashboardController", function($scope, $q, $routeParams, Games, Rankings, Team) {
         Rankings.getRankingsByOwner().then(function(result) {
             $scope.owners = [];
             $.each(result, function(ind, owner) {
-                console.log("Owner =", ind, owner.points);
                 $scope.owners.push({name: ind, points: owner.points});
+            });
+
+            Team.getTeams().then(function(result) {
+                var teamByOwner = {};
+                $.each(result, function(ind, team) {
+                    if(typeof teamByOwner[team.owner] === 'undefined') {
+                        teamByOwner[team.owner] = [];
+                    }
+
+                    teamByOwner[team.owner].push(team.shortname);
+                });
+
+                $.each($scope.owners, function(ind, owner) {
+                    $scope.owners[ind].teams = teamByOwner[owner.name];
+                });
+
+                console.log("Owners =", $scope.owners);
             });
         });
 

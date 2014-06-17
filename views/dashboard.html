@@ -1,9 +1,19 @@
 <div ng-controller="DashboardController">
     <h2 class="header">Current Standings</h2>
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="owner in owners|orderBy:'points':true">
-            <span>#{{$index + 1}}</span>
-            <span>{{owner.name}} - {{owner.points}} points</span>
+        <li class="list-group-item standings-container" ng-repeat="owner in owners|orderBy:'points':true">
+            <div class="owner-container">
+                <div class="owner-item ranking">
+                    <span class="header">{{$index + 1}}</span>
+                </div>
+                <div class="owner-item owner-item-details">
+                    <div class="header">{{owner.name}}</div>
+                    <div class="item-detail">{{owner.points}} points</div>
+                    <div class="item-detail" id="{{owner.name}}-flags">
+                        <img class="mini-flag" ng-repeat="team in owner.teams" src="http://img.fifa.com/images/flags/4/{{team}}.png"/>
+                    </div>
+                </div>
+            </div>
         </li>
     </ul>
 
