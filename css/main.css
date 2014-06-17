@@ -87,7 +87,7 @@ h2.item-detail {
     text-decoration: none;
 }
 
-.basic-link:hover {
+.basic-link:hover,.basic-link:active {
     text-decoration: none;
 }
 
