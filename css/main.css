@@ -60,3 +60,7 @@ body {
     height: 23px;
     padding-left: 1px;
 }
+
+.owner-link {
+    color: black;
+}

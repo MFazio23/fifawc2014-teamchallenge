@@ -73,7 +73,7 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "gameTime";
     })
-    .controller("DashboardController", function($scope, $q, $routeParams, Games, Rankings, Team) {
+    .controller("DashboardController", function($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping) {
         Rankings.getRankingsByOwner().then(function(result) {
             $scope.owners = [];
             $.each(result, function(ind, owner) {
@@ -92,6 +92,7 @@ angular.module('fifaWC.controllers', [])
 
                 $.each($scope.owners, function(ind, owner) {
                     $scope.owners[ind].teams = teamByOwner[owner.name];
+                    $scope.owners[ind].id = ownerMapping[owner.name];
                 });
 
                 console.log("Owners =", $scope.owners);
