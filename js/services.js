@@ -29,7 +29,6 @@ angular
 
                         $.each(result[1].data, function (ind, kTeam) {
                             var aTeam = azureTeams[kTeam.name];
-                            if (typeof aTeam === 'undefined') console.log("Not found =", kTeam.name);
 
                             teams.push($.extend(kTeam, aTeam));
                         });
@@ -193,7 +192,7 @@ angular
                         });
 
                         $.each(result[1], function (ind, game) {
-                            if (game.status !== 'Pre-game') {
+                            if (game.status === 'Final') {
                                 $.each(getPointsFromGame(game), function (ind, teamGame) {
                                     teams[ind].points += teamGame.score;
                                 });

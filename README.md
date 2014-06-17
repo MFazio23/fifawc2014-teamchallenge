@@ -11,3 +11,4 @@ Ideas:
     - Show/hide scores
     - Add current game minute to dashboard game listing
     - "Is there a way to click on the flags so it goes to their standings/schedule?"
+    - Go right to current day in Fixtures(?)

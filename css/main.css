@@ -15,13 +15,25 @@ body {
     padding-left: 8px;
 }
 
-.fixture-game:last-child {
+.team-list-item {
+    overflow: hidden;
+}
+
+.team-list-item:last-child {
     margin-bottom: -1px;
 }
 
 .team-name {
     display: inline;
     vertical-align: middle;
+}
+
+.team-points {
+    float: right;
+}
+
+.team-text-item {
+    font-size: 24px;
 }
 
 .standings-container {
@@ -36,8 +48,12 @@ body {
     overflow: hidden;
 }
 
-.owner-item {
+.owner-item, .team-item {
     float: left;
+}
+
+.team-item {
+    padding-right: 8px;
 }
 
 .owner-item-details {
@@ -47,6 +63,11 @@ body {
 
 .item-detail {
     padding-left: 8px;
+}
+
+h2.item-detail {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .ranking {
@@ -61,6 +82,28 @@ body {
     padding-left: 1px;
 }
 
-.owner-link {
+.basic-link {
     color: black;
+    text-decoration: none;
+}
+
+.table-points {
+    float: right;
+}
+
+.team-summary {
+    font-size: 20px;
+    height: 30px;
+    text-align: justify;
+    padding: 0;
+}
+
+.team-summary span {
+    display: inline-block;
+}
+
+.team-summary:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
 }

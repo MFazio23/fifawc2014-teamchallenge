@@ -2,7 +2,7 @@
     <h2 class="header">Current Standings</h2>
     <ul class="list-group">
         <li class="list-group-item standings-container" ng-repeat="owner in owners|orderBy:'points':true">
-            <a href="#/owner/{{owner.id}}" class="owner-link">
+            <a href="#/owner/{{owner.id}}" class="basic-link">
                 <div class="owner-container">
                     <div class="owner-item ranking">
                         <span class="header">{{$index + 1}}</span>
@@ -22,7 +22,7 @@
     <h2 class="header">Today's Matches</h2>
     <ul class="list-group">
         <li class="list-group-item fixture-game" ng-repeat="game in games|orderBy:startTime">
-            <span>{{game.timeString}} - {{game.homeTeam}} ({{game.homeScore}}) vs. {{game.awayTeam}} ({{game.awayScore}}) - {{game.status}}</span>
+            <span>{{game.timeString}} - {{game.homeTeam}} ({{game.homeScore}}) vs. {{game.awayTeam}} ({{game.awayScore}}) - {{game.status}}<!-- - {{game.currentGameMinute}}'--></span>
         </li>
     </ul>
 </div>
