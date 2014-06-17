@@ -2,31 +2,11 @@
     <h1 class="header">{{owner.name}}</h1>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="team in teams|orderBy:name">
-            <img src="" ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/>
+            <a class="basic-link" href="http://en.wikipedia.org/wiki/{{team.wikipagename}}">
+                <img src="" ng-src="http://img.fifa.com/images/flags/4/{{team.shortname}}.png"/>
 
-            <h2 class="team-name header">{{team.name}}</h2>
-            <!--<table>
-                <tbody class="owner-team-number-table">
-                <tr>
-                    <th>GP</th>
-                    <th>W</th>
-                    <th>D</th>
-                    <th>L</th>
-                    <th>GF</th>
-                    <th>GA</th>
-                    <th>CS</th>
-                </tr>
-                <tr>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                </tbody>
-            </table>-->
+                <h2 class="team-name header">{{team.name}}</h2>
+            </a>
         </li>
     </ul>
 </div>
