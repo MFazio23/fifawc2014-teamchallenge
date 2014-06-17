@@ -87,6 +87,10 @@ h2.item-detail {
     text-decoration: none;
 }
 
+.basic-link:hover {
+    text-decoration: none;
+}
+
 .table-points {
     float: right;
 }
