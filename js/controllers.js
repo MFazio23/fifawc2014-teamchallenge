@@ -11,7 +11,7 @@ angular.module('fifaWC.controllers', [])
         });
 
         $scope.getActive = function(name) {
-            return $route.current.originalPath.indexOf(name) >= 0 ? "active" : "";
+            return $route.current.loadedTemplateUrl.indexOf(name) >= 0 ? "active" : "";
         };
 
         $scope.orderProp = "name";
