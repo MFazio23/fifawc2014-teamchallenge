@@ -1,5 +1,10 @@
 angular.module('fifaWC.config', [])
     .constant(
+    'wikiConfig',
+    {
+        wikiSearchURL: "http://en.wikipedia.org/w/index.php?search={searchTerm}&title=Special%3ASearch&go=Go"
+    })
+    .constant(
     'kimonoConfig',
     {
         kimonoTeamsURL: "http://worldcup.kimonolabs.com/api/teams?apikey=22d3649db54ee3dbcd7c3e5f8e001010&sort=name&fields=name,logo,group,groupRank,groupPoints,matchesPlayed,wins,losses,draws,goalsFor,goalsAgainst,goalsDiff,id,type",

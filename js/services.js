@@ -213,7 +213,7 @@ angular
                 return deferred.promise;
             }
         };
-    }]).factory('Leaders', ['$q', '$http', 'Team', 'kimonoConfig', function ($q, $http, Team, kimonoConfig) {
+    }]).factory('Leaders', ['$q', '$http', 'Team', 'kimonoConfig', 'wikiConfig', function ($q, $http, Team, kimonoConfig, wikiConfig) {
 
         return {
             getLeaders: function () {
@@ -234,11 +234,13 @@ angular
                         });
 
                         $.each(result[0].data, function(ind, leader) {
+                            leader.wikiLink = wikiConfig.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
                             leader.team = teams[leader.teamID];
                             leaders.goalLeaders.push(leader);
                         });
 
                         $.each(result[1].data, function(ind, leader) {
+                            leader.wikiLink = wikiConfig.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
                             leader.team = teams[leader.teamID];
                             leaders.assistLeaders.push(leader);
                         });

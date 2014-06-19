@@ -4,7 +4,8 @@
 
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="leader in goalLeaders">
-            <span>{{leader.firstName}} {{leader.lastName}} - {{leader.goals}}</span>
+            <a class="basic-link" href="{{leader.wikiLink}}">{{leader.firstName}} {{leader.lastName}} - {{leader.goals}}</a>
+
         </li>
     </ul>
 
@@ -12,7 +13,7 @@
 
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="leader in assistLeaders">
-            <span>{{leader.firstName}} {{leader.lastName}} - {{leader.assists}}</span>
+            <a class="basic-link" href="{{leader.wikiLink}}">{{leader.firstName}} {{leader.lastName}} - {{leader.assists}}</a>
         </li>
     </ul>
 
