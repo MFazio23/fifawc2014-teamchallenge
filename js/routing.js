@@ -25,8 +25,8 @@ angular
             .when('/owner/:ownerID', {
                 templateUrl: 'views/owner.html',
                 controller: 'OwnerController'
-            });
-
+            })
+            .otherwise({redirectTo: '/'});
         //TODO: Unless you can get this render properly from the server-side, the links break.
         //$locationProvider.html5Mode(true);
     });

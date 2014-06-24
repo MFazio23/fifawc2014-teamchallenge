@@ -1,10 +1,6 @@
 'use strict';
 
 angular.module('fifaWC.controllers', [])
-
-    .controller("MainController", function ($scope) {
-
-    })
     .controller("HeaderController", function ($scope, $q, $route, Owner) {
         Owner.getOwners().then(function(result) {
             $scope.owners = result;
@@ -25,10 +21,13 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "name";
     })
-    .controller("TableController", function($scope, Team) {
+    .controller("TableController", function($scope, $anchorScroll, $location, $rootScope, $routeParams, Team) {
         var currentGroup = "";
         Team.getTeams().then(function(result) {
             $scope.teams = result;
+
+            $location.hash($routeParams.team);
+            $anchorScroll();
         });
 
         $scope.newGroup = function(group) {

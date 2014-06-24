@@ -5,14 +5,6 @@ angular
             getTeams: function () {
                 var deferred = $q.defer();
 
-                //Add this back when going live
-                /*azureClient
-                 .getTable('teams')
-                 .read()
-                 .then(function (result) {
-                 deferred.resolve(result);
-                 });*/
-
                 $q
                     .all(
                         [azureClient.getTable('teams').read(),
@@ -36,12 +28,6 @@ angular
                         deferred.resolve(teams);
                     }
                 );
-
-                /*$q
-                 .all([$http.get('res/teams.json')])
-                 .then(function (results) {
-                 deferred.resolve(results[0].data);
-                 });*/
 
                 return deferred.promise;
             },
@@ -82,7 +68,6 @@ angular
             getOwners: function () {
                 var deferred = $q.defer();
 
-                //Add this back when going live
                 azureClient
                     .getTable('owners')
                     .orderBy("name")
@@ -91,12 +76,6 @@ angular
                         deferred.resolve(result);
                     });
 
-                /*$q
-                 .all([$http.get('res/owners.json')])
-                 .then(function (results) {
-                 deferred.resolve(results[0].data);
-                 });*/
-
                 return deferred.promise;
             }
         };
@@ -104,13 +83,6 @@ angular
         return {
             getGames: function () {
                 var deferred = $q.defer();
-                /*azureClient
-                 .getTable('games')
-                 .take(63)
-                 .read()
-                 .then(function (result) {
-                 deferred.resolve(result);
-                 });*/
 
                 $q
                     .all([
@@ -229,17 +201,17 @@ angular
                                 assistLeaders: []
                             },
                             teams = {};
-                        $.each(result[2], function(ind, team) {
+                        $.each(result[2], function (ind, team) {
                             teams[result.id] = team;
                         });
 
-                        $.each(result[0].data, function(ind, leader) {
+                        $.each(result[0].data, function (ind, leader) {
                             leader.wikiLink = wikiConfig.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
                             leader.team = teams[leader.teamID];
                             leaders.goalLeaders.push(leader);
                         });
 
-                        $.each(result[1].data, function(ind, leader) {
+                        $.each(result[1].data, function (ind, leader) {
                             leader.wikiLink = wikiConfig.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
                             leader.team = teams[leader.teamID];
                             leaders.assistLeaders.push(leader);

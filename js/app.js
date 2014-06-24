@@ -8,7 +8,8 @@ angular
             "fifaWC.config",
             "fifaWC.controllers",
             "fifaWC.services",
-            "fifaWC.routing"
+            "fifaWC.routing",
+            "fifaWC.analytics"
         ]
     );
 
