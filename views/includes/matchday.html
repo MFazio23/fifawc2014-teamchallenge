@@ -1,9 +1,9 @@
 <h2 class="header">Today's Matches</h2>
-<div id="show-scores-div" ng-click="toggleShowScores()">
+<div id="show-scores-div">
     <label for="show-scores" class="header" id="show-scores-label">
         Show Scores?
     </label>
-    <input type="checkbox" id="show-scores" name="show-scores" ng-checked="showScores"/>
+    <input type="checkbox" id="show-scores" name="show-scores" ng-checked="showScores" ng-click="toggleShowScores()"/>
 </div>
         {{testValue}}
 <ul class="list-group">
