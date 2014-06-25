@@ -6,11 +6,17 @@
                 <div class="col-xs-5 col-xs-offset-3 c header">Group {{game.group}}</div>
             </div>
             <div class="row">
-                <div class="col-xs-2 c"><img class="mini-flag" src="" ng-src="{{game.homeTeamFlag}}"/></div>
-                <div class="col-xs-3 c">{{game.homeTeam}}</div>
+                <a class="basic-link" href="#table#{{game.homeTeam}}">
+                    <div class="col-xs-2 r"><img class="mini-flag" src="" ng-src="{{game.homeTeamFlag}}"/></div>
+                    <div class="col-xs-3 c">{{game.homeTeam}}</div>
+                </a>
+
                 <div class="col-xs-1 c">vs</div>
-                <div class="col-xs-3 c">{{game.awayTeam}}</div>
-                <div class="col-xs-2 c"><img class="mini-flag" src="" ng-src="{{game.awayTeamFlag}}"/></div>
+
+                <a class="basic-link" href="#table#{{game.awayTeam}}">
+                    <div class="col-xs-3 c">{{game.awayTeam}}</div>
+                    <div class="col-xs-2 l"><img class="mini-flag" src="" ng-src="{{game.awayTeamFlag}}"/></div>
+                </a>
             </div>
             <div class="row">
                 <div class="col-xs-2 col-xs-offset-2 c">{{game.homeScore}}</div>
