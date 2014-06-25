@@ -12,7 +12,7 @@
                         <div class="item-detail">{{owner.points}} points</div>
                         <div class="item-detail" id="{{owner.name}}-flags">
 
-                            <a class="mini-flag basic-link" ng-repeat="team in owner.teams" href="#table?team={{team.name}}">
+                            <a class="mini-flag basic-link" ng-repeat="team in owner.teams" href="#table#{{team.name}}">
                                 <img class="mini-flag"
                                      src="http://img.fifa.com/images/flags/4/{{team.shortName}}.png"/>
                             </a>
