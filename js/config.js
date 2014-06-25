@@ -1,4 +1,7 @@
 angular.module('fifaWC.config', [])
+    .config(['localStorageServiceProvider', function(localStorageServiceProvider) {
+        localStorageServiceProvider.setPrefix("fifaWC");
+    }])
     .constant(
     'URLs',
     {

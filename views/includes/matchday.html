@@ -1,10 +1,11 @@
 <h2 class="header">Today's Matches</h2>
-<div id="show-scores-div" ng-click="showScores=!showScores">
+<div id="show-scores-div" ng-click="toggleShowScores()">
     <label for="show-scores" class="header" id="show-scores-label">
         Show Scores?
     </label>
     <input type="checkbox" id="show-scores" name="show-scores" ng-checked="showScores"/>
 </div>
+        {{testValue}}
 <ul class="list-group">
     <li class="list-group-item fixture-game" ng-repeat="game in games|orderBy:startTime">
         <div class="container dashboard-container">

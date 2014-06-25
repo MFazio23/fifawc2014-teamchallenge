@@ -4,6 +4,7 @@ angular
     .module(
         'fifaWC',
         [
+            "LocalStorageModule",
             "ngRoute",
             "fifaWC.config",
             "fifaWC.controllers",

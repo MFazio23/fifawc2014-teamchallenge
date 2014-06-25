@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fifaWC.controllers', [])
+angular.module('fifaWC.controllers', ['LocalStorageModule'])
     .controller("HeaderController", function ($scope, $q, $route, Owner) {
         Owner.getOwners().then(function (result) {
             $scope.owners = result;
@@ -83,7 +83,7 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "gameTime";
     })
-    .controller("DashboardController",function ($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping) {
+    .controller("DashboardController",function ($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping, localStorageService) {
         Rankings.getRankingsByOwner().then(function (result) {
             $scope.owners = [];
             $.each(result, function (ind, owner) {
@@ -123,10 +123,11 @@ angular.module('fifaWC.controllers', [])
             });
         });
 
-        $scope.toggleShowScores = function toggleShowScores() {
-            console.log("Toggle show scores");
-            $scope.showScores = !$scope.showScores;
+        $scope.showScores = localStorageService.get('showScores') == 'true';
 
+        $scope.toggleShowScores = function toggleShowScores() {
+            $scope.showScores = !$scope.showScores;
+            localStorageService.set('showScores', $scope.showScores);
         }
     }).controller("LeadersController", function ($scope, $q, $routeParams, Leaders) {
         Leaders.getLeaders().then(function (result) {
