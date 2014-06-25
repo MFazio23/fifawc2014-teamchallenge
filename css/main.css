@@ -2,6 +2,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.l {
+    text-align: left;
+}
+
+.c {
+    text-align: center;
+}
+
+.r {
+    text-align: right;
+}
+
 .navbar-brand {
     padding: 0 15px 0 0;
 }
@@ -34,10 +46,6 @@ body {
 
 .team-text-item {
     font-size: 24px;
-}
-
-.standings-container {
-    padding: 10px 5px;
 }
 
 .owner-team-number-table {
@@ -79,6 +87,7 @@ h2.item-detail {
 .mini-flag {
     width: 35px;
     height: 23px;
+    display: inline-block;
     padding-left: 1px;
 }
 
@@ -110,4 +119,8 @@ h2.item-detail {
     content: '';
     width: 100%;
     display: inline-block;
+}
+
+.dashboard-container {
+    padding: 10px 5px;
 }
