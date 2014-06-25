@@ -10,7 +10,7 @@ angular
     function ($location, $window) {
         return {
             trackEvent: function () {
-                console.log("Tracking event -", $location.path());
+                //console.log("Tracking event -", $location.path());
                 $window.ga(
                     'send',
                     'pageview',
