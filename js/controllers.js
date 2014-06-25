@@ -2,11 +2,11 @@
 
 angular.module('fifaWC.controllers', [])
     .controller("HeaderController", function ($scope, $q, $route, Owner) {
-        Owner.getOwners().then(function(result) {
+        Owner.getOwners().then(function (result) {
             $scope.owners = result;
         });
 
-        $scope.getActive = function(name) {
+        $scope.getActive = function (name) {
             var templateURL = $route.current.loadedTemplateUrl;
             return typeof templateURL !== 'undefined' && templateURL.indexOf(name) >= 0 ? "active" : "";
         };
@@ -15,23 +15,23 @@ angular.module('fifaWC.controllers', [])
 
     })
     .controller("TeamsController", function ($scope, $q, Team) {
-        Team.getTeams().then(function(result) {
+        Team.getTeams().then(function (result) {
             $scope.teams = result;
         });
 
         $scope.orderProp = "name";
     })
-    .controller("TableController", function($scope, $anchorScroll, $location, $rootScope, $routeParams, Team) {
+    .controller("TableController", function ($scope, $anchorScroll, $location, $rootScope, $routeParams, Team) {
         var currentGroup = "";
-        Team.getTeams().then(function(result) {
+        Team.getTeams().then(function (result) {
             $scope.teams = result;
 
             $location.hash($routeParams.team);
             $anchorScroll();
         });
 
-        $scope.newGroup = function(group) {
-            if(group !== currentGroup) {
+        $scope.newGroup = function (group) {
+            if (group !== currentGroup) {
                 currentGroup = group;
                 return true;
             }
@@ -41,23 +41,23 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "name";
     })
-    .controller("OwnerController", function($scope, $q, $routeParams, Owner, Team) {
-        Owner.getOwner($routeParams.ownerID).then(function(result) {
+    .controller("OwnerController", function ($scope, $q, $routeParams, Owner, Team) {
+        Owner.getOwner($routeParams.ownerID).then(function (result) {
             $scope.owner = result;
 
-            Team.getTeamsByOwner($scope.owner.name).then(function(result) {
+            Team.getTeamsByOwner($scope.owner.name).then(function (result) {
                 $scope.teams = result;
             });
         });
     })
-    .controller("FixturesController", function($scope, $q, $routeParams, Games) {
+    .controller("FixturesController", function ($scope, $q, $routeParams, Games) {
         var layoutDate = -1;
-        Games.getGames().then(function(result) {
+        Games.getGames().then(function (result) {
 
             $scope.games = [];
 
-            for(var g in result) {
-                if(result.hasOwnProperty(g)) {
+            for (var g in result) {
+                if (result.hasOwnProperty(g)) {
                     var game = result[g];
                     game.gameTime = new Date(game.startTime);
                     game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
@@ -68,10 +68,10 @@ angular.module('fifaWC.controllers', [])
             }
         });
 
-        $scope.newDate = function(dateTime, gameString) {
+        $scope.newDate = function (dateTime, gameString) {
             var date = dateTime.getMonth() + dateTime.getDate();
 
-            if(date !== layoutDate) {
+            if (date !== layoutDate) {
                 layoutDate = date;
                 $scope.headerString = moment(dateTime).format("dddd, MMMM Do, YYYY");
 
@@ -83,37 +83,42 @@ angular.module('fifaWC.controllers', [])
 
         $scope.orderProp = "gameTime";
     })
-    .controller("DashboardController", function($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping) {
-        Rankings.getRankingsByOwner().then(function(result) {
+    .controller("DashboardController",function ($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping) {
+        Rankings.getRankingsByOwner().then(function (result) {
             $scope.owners = [];
-            $.each(result, function(ind, owner) {
+            $.each(result, function (ind, owner) {
                 $scope.owners.push({name: ind, points: owner.points});
             });
 
-            Team.getTeams().then(function(result) {
+            Team.getTeams().then(function (result) {
                 var teamByOwner = {};
-                $.each(result, function(ind, team) {
-                    if(typeof teamByOwner[team.owner] === 'undefined') {
+                $.each(result, function (ind, team) {
+                    if (typeof teamByOwner[team.owner] === 'undefined') {
                         teamByOwner[team.owner] = [];
                     }
 
-                    teamByOwner[team.owner].push(team.shortname);
+                    teamByOwner[team.owner].push(
+                        {
+                            shortName: team.shortname,
+                            name: team.name
+                        }
+                    );
                 });
 
-                $.each($scope.owners, function(ind, owner) {
+                $.each($scope.owners, function (ind, owner) {
                     $scope.owners[ind].teams = teamByOwner[owner.name];
                     $scope.owners[ind].id = ownerMapping[owner.name];
                 });
             });
         });
 
-        Games.getGames().then(function(result) {
+        Games.getGames().then(function (result) {
             $scope.games = [];
-            $.each(result, function(ind, game) {
+            $.each(result, function (ind, game) {
                 var start = moment(game.startTime);
                 var format = "YYYY-MM-DD";
 
-                if(start.format(format) === moment().format(format)) {
+                if (start.format(format) === moment().format(format)) {
                     game.gameTime = new Date(game.startTime);
                     game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
                     game.gameString = game.teamA + game.teamB;
@@ -122,8 +127,8 @@ angular.module('fifaWC.controllers', [])
                 }
             });
         });
-    }).controller("LeadersController", function($scope, $q, $routeParams, Leaders) {
-        Leaders.getLeaders().then(function(result) {
+    }).controller("LeadersController", function ($scope, $q, $routeParams, Leaders) {
+        Leaders.getLeaders().then(function (result) {
             $scope.goalLeaders = result.goalLeaders;
             $scope.assistLeaders = result.assistLeaders;
         });
