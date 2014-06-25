@@ -123,8 +123,13 @@ h2.item-detail {
 
 .dashboard-container {
     padding: 10px 5px;
+    max-width: 400px;
 }
 
 .row div {
     padding: 0;
+}
+
+.container {
+    max-width: 400px;
 }
