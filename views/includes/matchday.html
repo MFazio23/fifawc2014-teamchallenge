@@ -1,4 +1,10 @@
 <h2 class="header">Today's Matches</h2>
+<div id="show-scores-div" ng-click="showScores=!showScores">
+    <label for="show-scores" class="header" id="show-scores-label">
+        Show Scores?
+    </label>
+    <input type="checkbox" id="show-scores" name="show-scores" ng-checked="showScores"/>
+</div>
 <ul class="list-group">
     <li class="list-group-item fixture-game" ng-repeat="game in games|orderBy:startTime">
         <div class="container dashboard-container">
@@ -19,9 +25,9 @@
                 </a>
             </div>
             <div class="row">
-                <div class="col-xs-2 col-xs-offset-2 c">{{game.homeScore}}</div>
+                <div class="col-xs-2 col-xs-offset-2 c"><span ng-if="showScores">{{game.homeScore}}</span></div>
                 <div class="col-xs-3 c">{{game.status}}</div>
-                <div class="col-xs-2 c">{{game.awayScore}}</div>
+                <div class="col-xs-2 c"><span ng-if="showScores">{{game.awayScore}}</span></div>
             </div>
         </div>
     </li>

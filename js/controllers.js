@@ -122,6 +122,12 @@ angular.module('fifaWC.controllers', [])
                 }
             });
         });
+
+        $scope.toggleShowScores = function toggleShowScores() {
+            console.log("Toggle show scores");
+            $scope.showScores = !$scope.showScores;
+
+        }
     }).controller("LeadersController", function ($scope, $q, $routeParams, Leaders) {
         Leaders.getLeaders().then(function (result) {
             $scope.goalLeaders = result.goalLeaders;
