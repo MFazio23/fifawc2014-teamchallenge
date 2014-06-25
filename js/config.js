@@ -1,7 +1,8 @@
 angular.module('fifaWC.config', [])
     .constant(
-    'wikiConfig',
+    'URLs',
     {
+        fifaFlagURL: "http://img.fifa.com/images/flags/4/{shortName}.png",
         wikiSearchURL: "http://en.wikipedia.org/w/index.php?search={searchTerm}&title=Special%3ASearch&go=Go"
     })
     .constant(

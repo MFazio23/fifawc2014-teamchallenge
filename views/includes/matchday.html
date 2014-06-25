@@ -1,0 +1,22 @@
+<h2 class="header">Today's Matches</h2>
+<ul class="list-group">
+    <li class="list-group-item fixture-game" ng-repeat="game in games|orderBy:startTime">
+        <div class="container dashboard-container">
+            <div class="row">
+                <div class="col-xs-5 col-xs-offset-3 c header">Group {{game.group}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 c"><img class="mini-flag" src="" ng-src="{{game.homeTeamFlag}}"/></div>
+                <div class="col-xs-3 c">{{game.homeTeam}}</div>
+                <div class="col-xs-1 c">vs</div>
+                <div class="col-xs-3 c">{{game.awayTeam}}</div>
+                <div class="col-xs-2 c"><img class="mini-flag" src="" ng-src="{{game.awayTeamFlag}}"/></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-2 c">{{game.homeScore}}</div>
+                <div class="col-xs-3 c">{{game.status}}</div>
+                <div class="col-xs-2 c">{{game.awayScore}}</div>
+            </div>
+        </div>
+    </li>
+</ul>

@@ -97,12 +97,7 @@ angular.module('fifaWC.controllers', [])
                         teamByOwner[team.owner] = [];
                     }
 
-                    teamByOwner[team.owner].push(
-                        {
-                            shortName: team.shortname,
-                            name: team.name
-                        }
-                    );
+                    teamByOwner[team.owner].push(team);
                 });
 
                 $.each($scope.owners, function (ind, owner) {

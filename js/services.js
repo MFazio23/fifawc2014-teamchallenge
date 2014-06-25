@@ -1,7 +1,12 @@
 angular
     .module('fifaWC.services', ['fifaWC.config'])
-    .factory('Team', ['$q', '$http', 'kimonoConfig', function ($q, $http, kimonoConfig) {
+    .factory('Team', ['$q', '$http', 'kimonoConfig', 'URLs', function ($q, $http, kimonoConfig, URLs) {
+        var getFlagForTeam = function getFlagForTeam(team) {
+            return URLs.fifaFlagURL.replace("{shortName}", team.shortname);
+        };
+
         return {
+            getFlagForTeam: getFlagForTeam,
             getTeams: function () {
                 var deferred = $q.defer();
 
@@ -21,6 +26,7 @@ angular
 
                         $.each(result[1].data, function (ind, kTeam) {
                             var aTeam = azureTeams[kTeam.name];
+                            aTeam.flagURL = getFlagForTeam(aTeam);
 
                             teams.push($.extend(kTeam, aTeam));
                         });
@@ -40,7 +46,14 @@ angular
                     .orderBy("name")
                     .read()
                     .then(function (result) {
-                        deferred.resolve(result);
+                        var teams = [];
+
+                        $.each(result, function(ind, team) {
+                            team.flagURL = getFlagForTeam(team);
+                            teams.push(team);
+                        });
+
+                        deferred.resolve(teams);
                     });
 
                 return deferred.promise;
@@ -79,7 +92,7 @@ angular
                 return deferred.promise;
             }
         };
-    }]).factory('Games', ['$q', '$http', 'kimonoConfig', function ($q, $http, kimonoConfig) {
+    }]).factory('Games', ['$q', '$http', 'kimonoConfig', 'Team', function ($q, $http, kimonoConfig, Team) {
         return {
             getGames: function () {
                 var deferred = $q.defer();
@@ -87,21 +100,23 @@ angular
                 $q
                     .all([
                         $http.get(kimonoConfig.kimonoMatchesURL),
-                        $http.get(kimonoConfig.kimonoTeamsURL)
+                        Team.getTeams()
                     ])
                     .then(
                     function (result) {
                         var matches = [],
                             teams = {};
 
-                        $.each(result[1].data, function (ind, team) {
+                        $.each(result[1], function (ind, team) {
                             teams[team.id] = team;
                         });
 
                         $.each(result[0].data, function (ind, match) {
 
                             match.awayTeam = teams[match.awayTeamId].name;
+                            match.awayTeamFlag = teams[match.awayTeamId].flagURL;
                             match.homeTeam = teams[match.homeTeamId].name;
+                            match.homeTeamFlag = teams[match.homeTeamId].flagURL;
 
                             matches.push(match);
                         });
@@ -185,7 +200,7 @@ angular
                 return deferred.promise;
             }
         };
-    }]).factory('Leaders', ['$q', '$http', 'Team', 'kimonoConfig', 'wikiConfig', function ($q, $http, Team, kimonoConfig, wikiConfig) {
+    }]).factory('Leaders', ['$q', '$http', 'Team', 'kimonoConfig', 'URLs', function ($q, $http, Team, kimonoConfig, URLs) {
 
         return {
             getLeaders: function () {
@@ -206,13 +221,13 @@ angular
                         });
 
                         $.each(result[0].data, function (ind, leader) {
-                            leader.wikiLink = wikiConfig.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
+                            leader.wikiLink = URLs.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
                             leader.team = teams[leader.teamID];
                             leaders.goalLeaders.push(leader);
                         });
 
                         $.each(result[1].data, function (ind, leader) {
-                            leader.wikiLink = wikiConfig.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
+                            leader.wikiLink = URLs.wikiSearchURL.replace("{searchTerm}", encodeURI(leader.firstName + " " + leader.lastName));
                             leader.team = teams[leader.teamID];
                             leaders.assistLeaders.push(leader);
                         });

@@ -1,7 +1,7 @@
 <div ng-controller="DashboardController">
     <h2 class="header">Current Standings</h2>
     <ul class="list-group">
-        <li class="list-group-item standings-container" ng-repeat="owner in owners|orderBy:'points':true">
+        <li class="list-group-item dashboard-container" ng-repeat="owner in owners|orderBy:'points':true">
             <a href="#/owner/{{owner.id}}" class="basic-link">
                 <div class="owner-container">
                     <div class="owner-item ranking">
@@ -13,8 +13,7 @@
                         <div class="item-detail" id="{{owner.name}}-flags">
 
                             <a class="mini-flag basic-link" ng-repeat="team in owner.teams" href="#table#{{team.name}}">
-                                <img class="mini-flag"
-                                     src="http://img.fifa.com/images/flags/4/{{team.shortName}}.png"/>
+                                <img class="mini-flag" src="" ng-src="{{team.flagURL}}"/>
                             </a>
                         </div>
                     </div>
@@ -23,10 +22,6 @@
         </li>
     </ul>
 
-    <h2 class="header">Today's Matches</h2>
-    <ul class="list-group">
-        <li class="list-group-item fixture-game" ng-repeat="game in games|orderBy:startTime">
-            <span>{{game.timeString}} - {{game.homeTeam}} ({{game.homeScore}}) vs. {{game.awayTeam}} ({{game.awayScore}}) - {{game.status}}<!-- - {{game.currentGameMinute}}'--></span>
-        </li>
-    </ul>
+    <div ng-include src="'views/includes/matchday.html'"></div>
+
 </div>

@@ -124,3 +124,7 @@ h2.item-detail {
 .dashboard-container {
     padding: 10px 5px;
 }
+
+.row div {
+    padding: 0;
+}
