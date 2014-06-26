@@ -85,11 +85,11 @@ angular.module('fifaWC.controllers', [])
 
         $scope.showScores = ScoreConfig.showScores();
 
-        $scope.toggleShowScores = function() {
+        $scope.toggleShowScores = function () {
             $scope.showScores = ScoreConfig.toggleShowScores();
         };
     })
-    .controller("DashboardController", function ($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping, ScoreConfig) {
+    .controller("DashboardController",function ($scope, $q, $routeParams, $templateCache, $timeout, Rankings, Team, ownerMapping) {
         Rankings.getRankingsByOwner().then(function (result) {
             $scope.owners = [];
             $.each(result, function (ind, owner) {
@@ -113,6 +113,16 @@ angular.module('fifaWC.controllers', [])
             });
         });
 
+        $scope.matchday = 'views/includes/matchday.html';
+        /*$scope.refreshScores = function refreshScores() {
+            console.log("Refreshing scores");
+            $templateCache.remove("views/includes/matchday.html");
+            $scope.matchday = 'views/includes/matchday.html';
+        };
+
+        setInterval($scope.refreshScores, 5000);*/
+    }).controller("MatchDayController",function ($scope, $q, $routeParams, $templateCache, Games, ScoreConfig) {
+
         Games.getGames().then(function (result) {
             $scope.games = [];
             $.each(result, function (ind, game) {
@@ -131,7 +141,7 @@ angular.module('fifaWC.controllers', [])
 
         $scope.showScores = ScoreConfig.showScores();
 
-        $scope.toggleShowScores = function() {
+        $scope.toggleShowScores = function () {
             $scope.showScores = ScoreConfig.toggleShowScores();
         };
     }).controller("LeadersController", function ($scope, $q, $routeParams, Leaders) {

@@ -1,35 +1,42 @@
-<h2 class="header">Today's Matches</h2>
-<div id="show-scores-div">
-    <label for="show-scores" class="header" id="show-scores-label">
-        Show Scores?
-    </label>
-    <input type="checkbox" id="show-scores" name="show-scores" ng-checked="showScores" ng-click="toggleShowScores()"/>
+<div ng-controller="MatchDayController">
+    <h2 class="header">Today's Matches</h2>
+
+    <div id="show-scores-div">
+        <label for="show-scores" class="header" id="show-scores-label">
+            Show Scores?
+        </label>
+        <input type="checkbox" id="show-scores" name="show-scores" ng-checked="showScores"
+               ng-click="toggleShowScores()"/>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item fixture-game dashboard-container" ng-repeat="game in games|orderBy:startTime">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5 col-xs-offset-3 c header">Group {{game.group}}</div>
+                </div>
+                <div class="row">
+                    <a class="basic-link" href="#table#{{game.homeTeam}}">
+                        <div class="col-xs-2 r"><img class="mini-flag" src="" ng-src="{{game.homeTeamFlag}}"/></div>
+                        <div class="col-xs-3 c">{{game.homeTeam}}</div>
+                    </a>
+
+                    <div class="col-xs-1 c">vs</div>
+
+                    <a class="basic-link" href="#table#{{game.awayTeam}}">
+                        <div class="col-xs-3 c">{{game.awayTeam}}</div>
+                        <div class="col-xs-2 l"><img class="mini-flag" src="" ng-src="{{game.awayTeamFlag}}"/></div>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-2 c"><span ng-if="showScores">{{game.homeScore}}</span></div>
+                    <div class="col-xs-3 c">{{game.status == 'In-progress' ? game.currentGameMinute + "'" :
+                        game.status}}
+                    </div>
+                    <small class="hidden">Status = {{game.status}}, Current Game Minute = {{game.currentGameMinute}}
+                    </small>
+                    <div class="col-xs-2 c"><span ng-if="showScores">{{game.awayScore}}</span></div>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
-<ul class="list-group">
-    <li class="list-group-item fixture-game dashboard-container" ng-repeat="game in games|orderBy:startTime">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-5 col-xs-offset-3 c header">Group {{game.group}}</div>
-            </div>
-            <div class="row">
-                <a class="basic-link" href="#table#{{game.homeTeam}}">
-                    <div class="col-xs-2 r"><img class="mini-flag" src="" ng-src="{{game.homeTeamFlag}}"/></div>
-                    <div class="col-xs-3 c">{{game.homeTeam}}</div>
-                </a>
-
-                <div class="col-xs-1 c">vs</div>
-
-                <a class="basic-link" href="#table#{{game.awayTeam}}">
-                    <div class="col-xs-3 c">{{game.awayTeam}}</div>
-                    <div class="col-xs-2 l"><img class="mini-flag" src="" ng-src="{{game.awayTeamFlag}}"/></div>
-                </a>
-            </div>
-            <div class="row">
-                <div class="col-xs-2 col-xs-offset-2 c"><span ng-if="showScores">{{game.homeScore}}</span></div>
-                <div class="col-xs-3 c">{{game.status == 'In-progress' ? game.currentGameMinute + "'" : game.status}}</div>
-                <small class="hidden">Status = {{game.status}}, Current Game Minute = {{game.currentGameMinute}}</small>
-                <div class="col-xs-2 c"><span ng-if="showScores">{{game.awayScore}}</span></div>
-            </div>
-        </div>
-    </li>
-</ul>
