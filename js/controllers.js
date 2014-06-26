@@ -115,29 +115,36 @@ angular.module('fifaWC.controllers', [])
 
         $scope.matchday = 'views/includes/matchday.html';
         /*$scope.refreshScores = function refreshScores() {
-            console.log("Refreshing scores");
-            $templateCache.remove("views/includes/matchday.html");
-            $scope.matchday = 'views/includes/matchday.html';
-        };
+         console.log("Refreshing scores");
+         $templateCache.remove("views/includes/matchday.html");
+         $scope.matchday = 'views/includes/matchday.html';
+         };
 
-        setInterval($scope.refreshScores, 5000);*/
+         setInterval($scope.refreshScores, 5000);*/
     }).controller("MatchDayController",function ($scope, $q, $routeParams, $templateCache, Games, ScoreConfig) {
 
-        Games.getGames().then(function (result) {
-            $scope.games = [];
-            $.each(result, function (ind, game) {
-                var start = moment(game.startTime);
-                var format = "YYYY-MM-DD";
+        var loadGameData = function loadGameData() {
+            Games.getGames().then(function (result) {
+                $scope.games = [];
+                $.each(result, function (ind, game) {
+                    var start = moment(game.startTime);
+                    var format = "YYYY-MM-DD";
 
-                if (start.format(format) === moment().format(format)) {
-                    game.gameTime = new Date(game.startTime);
-                    game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
-                    game.gameString = game.teamA + game.teamB;
+                    if (start.format(format) === moment().format(format)) {
+                        game.gameTime = new Date(game.startTime);
+                        game.timeString = moment(game.startTime).format("h:mm A") + " CDT";
+                        game.gameString = game.teamA + game.teamB;
 
-                    $scope.games.push(game);
-                }
+                        $scope.games.push(game);
+                    }
+                });
             });
-        });
+        };
+
+        loadGameData();
+
+        //Refresh scores every 30 seconds
+        setInterval(loadGameData, 30000);
 
         $scope.showScores = ScoreConfig.showScores();
 
