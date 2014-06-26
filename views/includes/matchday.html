@@ -9,7 +9,7 @@
                ng-click="toggleShowScores()"/>
     </div>
     <ul class="list-group">
-        <li class="list-group-item fixture-game dashboard-container" ng-repeat="game in games|orderBy:startTime">
+        <li class="list-group-item fixture-game dashboard-container {{game.status == 'In-progress' ? 'list-group-item-success' : ''}}"}}" ng-repeat="game in games|orderBy:startTime">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-5 col-xs-offset-3 c header">Group {{game.group}}</div>
