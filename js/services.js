@@ -1,5 +1,21 @@
 angular
-    .module('fifaWC.services', ['fifaWC.config'])
+    .module('fifaWC.services', ['fifaWC.config', 'LocalStorageModule'])
+    .factory('ScoreConfig', ['localStorageService', function (localStorageService) {
+        var showScores = function showScores() {
+            return localStorageService.get("showScores") == 'true';
+        };
+
+        return {
+            showScores: showScores,
+            toggleShowScores: function toggleShowScores() {
+                var scores = showScores();
+
+                localStorageService.set('showScores', !scores);
+
+                return !scores;
+            }
+        }
+    }])
     .factory('Team', ['$q', '$http', 'kimonoConfig', 'URLs', function ($q, $http, kimonoConfig, URLs) {
         var getFlagForTeam = function getFlagForTeam(team) {
             return URLs.fifaFlagURL.replace("{shortName}", team.shortname);
@@ -48,7 +64,7 @@ angular
                     .then(function (result) {
                         var teams = [];
 
-                        $.each(result, function(ind, team) {
+                        $.each(result, function (ind, team) {
                             team.flagURL = getFlagForTeam(team);
                             teams.push(team);
                         });

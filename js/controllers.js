@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fifaWC.controllers', ['LocalStorageModule'])
+angular.module('fifaWC.controllers', [])
     .controller("HeaderController", function ($scope, $q, $route, Owner) {
         Owner.getOwners().then(function (result) {
             $scope.owners = result;
@@ -50,7 +50,7 @@ angular.module('fifaWC.controllers', ['LocalStorageModule'])
             });
         });
     })
-    .controller("FixturesController", function ($scope, $q, $routeParams, Games) {
+    .controller("FixturesController", function ($scope, $q, $routeParams, Games, ScoreConfig) {
         var layoutDate = -1;
         Games.getGames().then(function (result) {
 
@@ -82,8 +82,14 @@ angular.module('fifaWC.controllers', ['LocalStorageModule'])
         };
 
         $scope.orderProp = "gameTime";
+
+        $scope.showScores = ScoreConfig.showScores();
+
+        $scope.toggleShowScores = function() {
+            $scope.showScores = ScoreConfig.toggleShowScores();
+        };
     })
-    .controller("DashboardController",function ($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping, localStorageService) {
+    .controller("DashboardController", function ($scope, $q, $routeParams, Games, Rankings, Team, ownerMapping, ScoreConfig) {
         Rankings.getRankingsByOwner().then(function (result) {
             $scope.owners = [];
             $.each(result, function (ind, owner) {
@@ -123,12 +129,11 @@ angular.module('fifaWC.controllers', ['LocalStorageModule'])
             });
         });
 
-        $scope.showScores = localStorageService.get('showScores') == 'true';
+        $scope.showScores = ScoreConfig.showScores();
 
-        $scope.toggleShowScores = function toggleShowScores() {
-            $scope.showScores = !$scope.showScores;
-            localStorageService.set('showScores', $scope.showScores);
-        }
+        $scope.toggleShowScores = function() {
+            $scope.showScores = ScoreConfig.toggleShowScores();
+        };
     }).controller("LeadersController", function ($scope, $q, $routeParams, Leaders) {
         Leaders.getLeaders().then(function (result) {
             $scope.goalLeaders = result.goalLeaders;
