@@ -149,16 +149,16 @@ angular
         var getPointsFromGame = function (game) {
             var points = { };
 
-            points[game.awayTeam] = getPointsObject(game.awayScore, game.homeScore);
-            points[game.homeTeam] = getPointsObject(game.homeScore, game.awayScore);
+            points[game.awayTeam] = getPointsObject(game.awayScore, game.homeScore, game.awayPenalties, game.homePenalties);
+            points[game.homeTeam] = getPointsObject(game.homeScore, game.awayScore, game.homePenalties, game.awayPenalties);
 
             return points;
         };
 
-        function getPointsObject(teamScore, opponentScore) {
+        function getPointsObject(teamScore, opponentScore, teamPenalties, opponentPenalties) {
             var pointsObj = {
-                won: teamScore > opponentScore,
-                lost: teamScore < opponentScore,
+                won: teamScore > opponentScore || (teamScore == opponentScore && teamPenalties > opponentPenalties),
+                lost: teamScore < opponentScore || (teamScore == opponentScore && teamPenalties < opponentPenalties),
                 drew: teamScore == opponentScore,
                 goalsFor: teamScore,
                 goalsAgainst: opponentScore,
