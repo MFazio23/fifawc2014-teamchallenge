@@ -96,7 +96,7 @@ h2.item-detail {
     text-decoration: none;
 }
 
-.basic-link:hover,.basic-link:active {
+.basic-link:hover, .basic-link:active {
     text-decoration: none;
 }
 
@@ -132,4 +132,10 @@ h2.item-detail {
 
 .container {
     max-width: 400px;
+}
+
+img.grayscale {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
 }

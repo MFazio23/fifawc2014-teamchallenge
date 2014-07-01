@@ -12,7 +12,7 @@
                         <div ng-if="showScores" class="item-detail">{{owner.points}} points</div>
                         <div class="item-detail" id="{{owner.name}}-flags">
                             <a class="mini-flag basic-link" ng-repeat="team in owner.teams" href="#table#{{team.name}}">
-                                <img class="mini-flag" src="" ng-src="{{team.flagURL}}"/>
+                                <img id="{{team.name}}-flag" class="mini-flag" ng-class="team.eliminated ? 'grayscale' : ''" src="" ng-src="{{team.flagURL}}"/>
                             </a>
                         </div>
                     </div>
