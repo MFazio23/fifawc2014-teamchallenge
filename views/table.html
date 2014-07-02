@@ -3,7 +3,7 @@
         <div ng-repeat="team in teams|orderBy:['group','groupRank']">
             <h3 class="header" ng-if="newGroup(team.group)">Group {{team.group}}</h3>
             <a href="" class="basic-link" ng-click="showDetails = ! showDetails">
-                <li class="list-group-item team-list-item">
+                <li class="list-group-item team-list-item" ng-class="team.groupRank < 3 ? 'list-group-item-success' : 'list-group-item-danger'" >
                     <div id="{{team.name}}" class="team-item">
                         <img src="" ng-src="{{team.flagURL}}"/>
                     </div>
