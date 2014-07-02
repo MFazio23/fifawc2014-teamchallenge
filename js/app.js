@@ -16,6 +16,5 @@ angular
 
 // Azure client
 var azureClient = new WindowsAzure.MobileServiceClient(
-    "https://fifa-wc.azure-mobile.net/",
-    "uksxBgKVVyIFHAfImEQvKfIsGbOymU33"
+    "https://fifa-wc.azure-mobile.net/"
 );
