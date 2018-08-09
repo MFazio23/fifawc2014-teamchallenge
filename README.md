@@ -5,6 +5,8 @@ The application is written using [AngularJS](https://angularjs.org/), with [Boot
 
 The application utilizes two data sources: [Kimono Labs' World Cup APIs](http://www.kimonolabs.com/worldcup/explorer) and custom services running on Microsoft Azure.  Kimono gives the team, match, and player info, while info about each team owner (as well as extra info, such as team elimination) comes from Azure Mobile Services.
 
+UPDATE (2018.08.09): Given that Kimono Labs is now defunct, this application will no longer work.
+
 ## Kimono APIs
 
 * [Teams (contains team info, including results, group info, and totals)](http://worldcup.kimonolabs.com/api/teams?apikey=22d3649db54ee3dbcd7c3e5f8e001010&sort=name&fields=name,logo,group,groupRank,groupPoints,matchesPlayed,wins,losses,draws,goalsFor,goalsAgainst,goalsDiff,id,type)
